@@ -45,6 +45,9 @@ func _process(delta):
 		
 		var rng = RandomNumberGenerator.new()
 		
+		if rng.randf() < 0.1:
+			SpeechbubbleManger.say(self, "Croak")
+		
 		if rng.randf() < 0.5:
 			print("append new wait task")
 			taskQueue.append(npcTaskBase.new(12,12))
