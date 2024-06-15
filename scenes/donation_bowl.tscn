@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://d1ukokw2wpy6h"]
 
-[ext_resource type="Texture2D" uid="uid://drbfhnrcuo6dd" path="res://assets/Sprites/Manmade/donationBox.png" id="1_sprpd"]
+[ext_resource type="Texture2D" uid="uid://d1oyknj54d33b" path="res://assets/Sprites/Manmade/donationBowl-empty.png" id="1_d5d4q"]
 [ext_resource type="Script" path="res://scripts/donation_bowl.gd" id="2_mer1o"]
 [ext_resource type="PackedScene" uid="uid://bdjsd2ljlp6fh" path="res://scenes/InteractableZone.tscn" id="4_n7rvs"]
 
@@ -9,7 +9,7 @@ size = Vector2(13, 10.5)
 
 [node name="Donation_Bowl" type="Sprite2D"]
 position = Vector2(-34, 88)
-texture = ExtResource("1_sprpd")
+texture = ExtResource("1_d5d4q")
 offset = Vector2(0, -15)
 script = ExtResource("2_mer1o")
 
