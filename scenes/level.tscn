@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=3 uid="uid://dqtdfv5teghq0"]
+
+[ext_resource type="Texture2D" uid="uid://bklwtgcsvf4se" path="res://assets/ground.png" id="1_0flp6"]
+[ext_resource type="Texture2D" uid="uid://4ysxl6k2xqfb" path="res://assets/seed.png" id="2_ofej6"]
+[ext_resource type="PackedScene" uid="uid://dswhw36mi1b8e" path="res://scenes/Environment/Plants/plant_2.tscn" id="3_n4gi2"]
+[ext_resource type="PackedScene" uid="uid://jolnrlr2w7pb" path="res://scenes/Environment/Plants/plant_1.tscn" id="4_m8ofo"]
+[ext_resource type="PackedScene" uid="uid://dkxskf01k5u3n" path="res://scenes/Environment/Plants/plant_4.tscn" id="5_tie3u"]
+[ext_resource type="PackedScene" uid="uid://dfqnlsa3t1aun" path="res://scenes/Environment/Plants/plant_5.tscn" id="6_hhqx0"]
+[ext_resource type="PackedScene" uid="uid://daewhsw15w5p0" path="res://scenes/Environment/Plants/plant_6.tscn" id="7_psxg0"]
+[ext_resource type="PackedScene" uid="uid://be30mdn7klwkj" path="res://scenes/Environment/donationBox.tscn" id="8_biswt"]
+
+[node name="Level" type="Node2D"]
+
+[node name="ground" type="Sprite2D" parent="."]
+z_index = -2
+scale = Vector2(1000, 1000)
+texture = ExtResource("1_0flp6")
+
+[node name="refetence_object" type="Sprite2D" parent="."]
+position = Vector2(-22, -9)
+texture = ExtResource("2_ofej6")
+
+[node name="Plant2" parent="." instance=ExtResource("3_n4gi2")]
+position = Vector2(50, -59)
+
+[node name="Plant1" parent="." instance=ExtResource("4_m8ofo")]
+position = Vector2(66, -48)
+
+[node name="Plant3" parent="." instance=ExtResource("5_tie3u")]
+position = Vector2(73, 8)
+
+[node name="Plant4" parent="." instance=ExtResource("6_hhqx0")]
+position = Vector2(-77, -23)
+
+[node name="Plant5" parent="." instance=ExtResource("7_psxg0")]
+position = Vector2(-48, -17)
+
+[node name="DonationBox" parent="." instance=ExtResource("8_biswt")]
+position = Vector2(0, -61)
