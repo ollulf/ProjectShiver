@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://s6tb73a6ul54"]
+
+[ext_resource type="Texture2D" uid="uid://b4dhd4vuusq7b" path="res://assets/LightCone.png" id="1_0wytg"]
+[ext_resource type="Script" path="res://scenes/Lamp.gd" id="2_07l6y"]
+
+[node name="Lamp" type="PointLight2D"]
+texture = ExtResource("1_0wytg")
+script = ExtResource("2_07l6y")

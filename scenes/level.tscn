@@ -1,7 +1,6 @@
 [gd_scene load_steps=28 format=3 uid="uid://c6itcxf6w4oee"]
 
 [ext_resource type="Texture2D" uid="uid://bklwtgcsvf4se" path="res://assets/ground.png" id="1_0flp6"]
-[ext_resource type="Texture2D" uid="uid://4ysxl6k2xqfb" path="res://assets/seed.png" id="2_ofej6"]
 [ext_resource type="PackedScene" uid="uid://dswhw36mi1b8e" path="res://scenes/Environment/Plants/plant_2.tscn" id="3_n4gi2"]
 [ext_resource type="PackedScene" uid="uid://jolnrlr2w7pb" path="res://scenes/Environment/Plants/plant_1.tscn" id="4_m8ofo"]
 [ext_resource type="PackedScene" uid="uid://dkxskf01k5u3n" path="res://scenes/Environment/Plants/plant_4.tscn" id="5_tie3u"]
@@ -25,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://b6r2pfuvi0l8" path="res://scenes/Environment/Rocks/FloorRocks_7.tscn" id="23_2dunq"]
 [ext_resource type="PackedScene" uid="uid://bkophbq71fuxo" path="res://scenes/Environment/Rocks/FloorRocks_8.tscn" id="24_2xast"]
 [ext_resource type="PackedScene" uid="uid://ckba1b7e6k1om" path="res://scenes/Environment/Rocks/FloorRocks_5.tscn" id="25_jtq77"]
+[ext_resource type="PackedScene" uid="uid://s6tb73a6ul54" path="res://scenes/lamp.tscn" id="26_m0qi5"]
 [ext_resource type="PackedScene" uid="uid://0natq0y4dseb" path="res://scenes/Environment/Plants/plant_3.tscn" id="26_xrlrc"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_3hnsb"]
@@ -46,12 +46,8 @@ z_index = -2
 scale = Vector2(1000, 1000)
 texture = ExtResource("1_0flp6")
 
-[node name="refetence_object" type="Sprite2D" parent="."]
-position = Vector2(-22, -9)
-texture = ExtResource("2_ofej6")
-
 [node name="Plant5" parent="." instance=ExtResource("7_psxg0")]
-position = Vector2(-48, -17)
+position = Vector2(-60, -19)
 
 [node name="SunClock" parent="." instance=ExtResource("9_wjoq0")]
 
@@ -816,3 +812,5 @@ position = Vector2(-18, -29)
 
 [node name="BigRock10" parent="Rocks" instance=ExtResource("14_0v4m8")]
 position = Vector2(174, 0)
+
+[node name="Lamp" parent="." instance=ExtResource("26_m0qi5")]
