@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://civesr6iscj7c"]
+
+[ext_resource type="Script" path="res://scenes/base_npc.gd" id="1_4wd5l"]
+[ext_resource type="Texture2D" uid="uid://gw7f0cb76nmp" path="res://assets/player.png" id="1_jqnoi"]
+[ext_resource type="Script" path="res://scenes/character_tween_animator.gd" id="3_jvs2y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j5t35"]
+radius = 6.0
+
+[node name="Base_NPC" type="CharacterBody2D"]
+script = ExtResource("1_4wd5l")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_enabled = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_jqnoi")
+offset = Vector2(2.08165e-12, -9)
+script = ExtResource("3_jvs2y")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_j5t35")
