@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://wdtx2rop3ead"]
+
+[ext_resource type="Texture2D" uid="uid://bvqegcbe2n8dy" path="res://assets/Sprites/Manmade/sunClock.png" id="1_msmkp"]
+[ext_resource type="Script" path="res://scenes/sun_clock.gd" id="2_d1x2b"]
+
+[node name="SunClock" type="Sprite2D"]
+texture = ExtResource("1_msmkp")
+hframes = 8
+frame = 4
+script = ExtResource("2_d1x2b")
