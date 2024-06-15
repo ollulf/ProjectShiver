@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dkxskf01k5u3n" path="res://scenes/Environment/Plants/plant_4.tscn" id="5_tie3u"]
 [ext_resource type="PackedScene" uid="uid://dfqnlsa3t1aun" path="res://scenes/Environment/Plants/plant_5.tscn" id="6_hhqx0"]
 [ext_resource type="PackedScene" uid="uid://daewhsw15w5p0" path="res://scenes/Environment/Plants/plant_6.tscn" id="7_psxg0"]
+[ext_resource type="PackedScene" uid="uid://d1ukokw2wpy6h" path="res://scenes/donation_bowl.tscn" id="8_ra3s8"]
 [ext_resource type="PackedScene" uid="uid://be30mdn7klwkj" path="res://scenes/Environment/donationBox.tscn" id="8_biswt"]
 [ext_resource type="PackedScene" uid="uid://wdtx2rop3ead" path="res://scenes/sun_clock.tscn" id="9_wjoq0"]
 
@@ -40,3 +41,5 @@ position = Vector2(-48, -17)
 position = Vector2(0, -61)
 
 [node name="SunClock" parent="." instance=ExtResource("9_wjoq0")]
+[node name="DonationBowl" parent="." instance=ExtResource("8_ra3s8")]
+position = Vector2(-15, -74)
