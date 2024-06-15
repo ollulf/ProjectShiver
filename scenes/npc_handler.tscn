@@ -4,7 +4,7 @@
 
 [sub_resource type="Curve" id="Curve_eg6vk"]
 max_value = 8.0
-_data = [Vector2(0.236842, 0), -4.41618, -4.41618, 0, 0, Vector2(0.504386, 8), 0.0, 0.0, 0, 0, Vector2(0.763158, 0), 0.0, 0.0, 0, 0]
+_data = [Vector2(0.236842, 0), -4.41618, -4.41618, 0, 0, Vector2(0.497807, 8), 0.0, 0.0, 0, 0, Vector2(0.763158, 0), 0.0, 0.0, 0, 0]
 point_count = 3
 
 [node name="NPCHandler" type="Node2D"]
