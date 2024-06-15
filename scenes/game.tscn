@@ -7,4 +7,4 @@
 
 [node name="Level" parent="." instance=ExtResource("9_yjs30")]
 
-[node name="functionality" parent="." instance=ExtResource("9_qcmoy")]
+[node name="Functionality" parent="." instance=ExtResource("9_qcmoy")]
