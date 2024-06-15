@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://0bgwfvc6i83"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_fb4e8"]
+[ext_resource type="Texture2D" uid="uid://gw7f0cb76nmp" path="res://assets/player.png" id="2_3mypg"]
 [ext_resource type="Texture2D" uid="uid://bdfnnjrj0sp0h" path="res://assets/shadow.png" id="2_usw1x"]
 [ext_resource type="Script" path="res://scenes/character_tween_animator.gd" id="3_p3b0f"]
-[ext_resource type="Texture2D" uid="uid://0oq3a58s7u06" path="res://assets/Sprites/Characters/Frog1_Body.png" id="3_q50xh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8lxmi"]
 radius = 6.0
@@ -23,8 +23,7 @@ position = Vector2(0, 1)
 texture = ExtResource("2_usw1x")
 
 [node name="sprite" type="Sprite2D" parent="."]
-position = Vector2(0, -4)
-texture = ExtResource("3_q50xh")
+texture = ExtResource("2_3mypg")
 offset = Vector2(2.08165e-12, -10)
 script = ExtResource("3_p3b0f")
 
