@@ -22,9 +22,9 @@ func player_movement(delta):
 	
 	if (input):
 		target_velocity = input.normalized() * WALK_SPEED
-		sprite.direction = input.normalized()
-	else:
-		sprite.direction = Vector2.ZERO
+		#sprite.direction = input.normalized()
+	#else:
+		#sprite.direction = Vector2.ZERO
 		
 	velocity = lerp(velocity, target_velocity, SMOOTHING)
 	
