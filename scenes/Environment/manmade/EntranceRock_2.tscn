@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://buusk6br2fcul"]
+
+[ext_resource type="Texture2D" uid="uid://b6q1xqowv25yd" path="res://assets/Sprites/Manmade/entranceStone2.png" id="1_357is"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2wao8"]
+radius = 8.0
+
+[node name="EntranceRock" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -35)
+texture = ExtResource("1_357is")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -6)
+shape = SubResource("CircleShape2D_2wao8")

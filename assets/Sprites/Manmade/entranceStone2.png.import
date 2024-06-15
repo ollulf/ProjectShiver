@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gw7f0cb76nmp"
-path="res://.godot/imported/player.png-be2216fcaabb5c62aa2466cd9a5726a8.ctex"
+uid="uid://b6q1xqowv25yd"
+path="res://.godot/imported/entranceStone2.png-a924451f682e203d46f8ffad6aff054a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player.png"
-dest_files=["res://.godot/imported/player.png-be2216fcaabb5c62aa2466cd9a5726a8.ctex"]
+source_file="res://assets/Sprites/Manmade/entranceStone2.png"
+dest_files=["res://.godot/imported/entranceStone2.png-a924451f682e203d46f8ffad6aff054a.ctex"]
 
 [params]
 

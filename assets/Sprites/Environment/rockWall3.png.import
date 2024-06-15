@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4ysxl6k2xqfb"
-path="res://.godot/imported/seed.png-a9a341cc4a44a8357187886decff00ae.ctex"
+uid="uid://u6svxf0qcfbc"
+path="res://.godot/imported/rockWall3.png-4b2255c922891a6eacb2164c8af83d7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/seed.png"
-dest_files=["res://.godot/imported/seed.png-a9a341cc4a44a8357187886decff00ae.ctex"]
+source_file="res://assets/Sprites/Environment/rockWall3.png"
+dest_files=["res://.godot/imported/rockWall3.png-4b2255c922891a6eacb2164c8af83d7e.ctex"]
 
 [params]
 

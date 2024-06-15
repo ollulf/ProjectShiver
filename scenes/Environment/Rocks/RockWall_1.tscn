@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://xalkknyn38ck"]
+
+[ext_resource type="Texture2D" uid="uid://u6svxf0qcfbc" path="res://assets/Sprites/Environment/rockWall3.png" id="1_v7e6o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bm47j"]
+size = Vector2(60, 54)
+
+[node name="RockWall" type="StaticBody2D"]
+z_index = -1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -19)
+texture = ExtResource("1_v7e6o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_bm47j")

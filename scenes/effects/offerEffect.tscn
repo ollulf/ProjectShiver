@@ -1,0 +1,82 @@
+[gd_scene load_steps=13 format=3 uid="uid://dlkj07crpmfv"]
+
+[ext_resource type="Script" path="res://scripts/vfx/timer.gd" id="1_nldbd"]
+[ext_resource type="Texture2D" uid="uid://bbxkit8oiv34f" path="res://assets/Sprites/effects/offerEffect.png" id="2_gov1k"]
+[ext_resource type="AudioStream" uid="uid://datjkvqecx8a0" path="res://sound/shrineOffering.wav" id="3_f1bgt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgg6w"]
+atlas = ExtResource("2_gov1k")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pc8am"]
+atlas = ExtResource("2_gov1k")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ne41e"]
+atlas = ExtResource("2_gov1k")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kir03"]
+atlas = ExtResource("2_gov1k")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5d34v"]
+atlas = ExtResource("2_gov1k")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpmwu"]
+atlas = ExtResource("2_gov1k")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqc4n"]
+atlas = ExtResource("2_gov1k")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shj7h"]
+atlas = ExtResource("2_gov1k")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yw5ht"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgg6w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pc8am")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ne41e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kir03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5d34v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpmwu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqc4n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shj7h")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="OfferEffect" type="Node2D"]
+script = ExtResource("1_nldbd")
+duration = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -13)
+sprite_frames = SubResource("SpriteFrames_yw5ht")
+frame = 7
+frame_progress = 1.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_f1bgt")
