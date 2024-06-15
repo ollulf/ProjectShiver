@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drbfhnrcuo6dd"
-path="res://.godot/imported/donationBox.png-4ddba966e98f164216ded02a06ef8b19.ctex"
+uid="uid://csmdb8w35ncrc"
+path="res://.godot/imported/Ghost4_LeftArm.png-4f56f4eeb946444f68dbaedc40cc1eab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Manmade/donationBox.png"
-dest_files=["res://.godot/imported/donationBox.png-4ddba966e98f164216ded02a06ef8b19.ctex"]
+source_file="res://assets/Sprites/Characters/Ghost4_LeftArm.png"
+dest_files=["res://.godot/imported/Ghost4_LeftArm.png-4f56f4eeb946444f68dbaedc40cc1eab.ctex"]
 
 [params]
 

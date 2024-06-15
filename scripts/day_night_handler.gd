@@ -8,6 +8,7 @@ extends DirectionalLight2D
 @export var timeOfDayInWorldHours = 10.0
 var day = 0
 
+var lightEnergy = 0;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,5 +29,6 @@ func _process(delta):
 		timeOfDayInWorldHours -= 24.0
 	
 	# update brightness
-	energy = darknessOverTimeOfDay.sample_baked(timeOfDayInWorldHours / 24.0)
+	lightEnergy = darknessOverTimeOfDay.sample_baked(timeOfDayInWorldHours / 24.0);
+	energy = lightEnergy;
 	pass
