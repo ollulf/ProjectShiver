@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://djslfe1cxnenq"]
+[gd_scene load_steps=4 format=3 uid="uid://djslfe1cxnenq"]
 
+[ext_resource type="Material" uid="uid://x8emyncykyx0" path="res://scripts/vfx/wobble.tres" id="1_njhy6"]
 [ext_resource type="Texture2D" uid="uid://cxpcgg4i786l6" path="res://assets/Sprites/Environment/tree1.png" id="1_xls32"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n0ew8"]
@@ -7,7 +8,8 @@ radius = 4.0
 
 [node name="Tree_1" type="StaticBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["wobbly"]]
+material = ExtResource("1_njhy6")
 position = Vector2(1, -35)
 texture = ExtResource("1_xls32")
 

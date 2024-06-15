@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bvnhmy8xu63we" path="res://assets/Sprites/Environment/plant_6.png" id="1_qpi0s"]
 
-[node name="Plant1" type="Sprite2D"]
+[node name="Plant1" type="Sprite2D" groups=["wobbly"]]
 z_index = -1
 position = Vector2(-1, -17)
 texture = ExtResource("1_qpi0s")
