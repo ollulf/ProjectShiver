@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnif1npq2u1dh"]
+[gd_scene load_steps=3 format=3 uid="uid://bnif1npq2u1dh"]
 
 [ext_resource type="Script" path="res://scripts/time_displayer.gd" id="1_ttfws"]
+[ext_resource type="Script" path="res://scripts/money-displayer.gd" id="2_ak3hu"]
 
 [node name="UI" type="CanvasLayer"]
 
@@ -8,3 +9,11 @@
 offset_right = 40.0
 offset_bottom = 23.0
 script = ExtResource("1_ttfws")
+
+[node name="money-displayer" type="Label" parent="."]
+offset_left = 233.0
+offset_right = 273.0
+offset_bottom = 23.0
+text = "MONI"
+horizontal_alignment = 2
+script = ExtResource("2_ak3hu")
