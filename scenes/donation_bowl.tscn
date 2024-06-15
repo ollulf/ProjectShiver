@@ -1,11 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1ukokw2wpy6h"]
+[gd_scene load_steps=4 format=3 uid="uid://4b7qa8fg86nb"]
 
 [ext_resource type="Texture2D" uid="uid://drbfhnrcuo6dd" path="res://assets/Sprites/Manmade/donationBox.png" id="1_sprpd"]
-[ext_resource type="PackedScene" uid="uid://bdjsd2ljlp6fh" path="res://scenes/InteractableZone.tscn" id="2_hm4i7"]
+[ext_resource type="PackedScene" path="res://scenes/InteractableZone.tscn" id="2_hm4i7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wot8b"]
+size = Vector2(13, 11)
 
 [node name="DonationBowl" type="Sprite2D"]
 position = Vector2(-34, 88)
 texture = ExtResource("1_sprpd")
+offset = Vector2(0, -15)
 
 [node name="InteractableZone" parent="." instance=ExtResource("2_hm4i7")]
-position = Vector2(1, 5)
+position = Vector2(1, -10)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.5, -5.5)
+shape = SubResource("RectangleShape2D_wot8b")
