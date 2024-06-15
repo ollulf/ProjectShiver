@@ -28,5 +28,5 @@ func _process(delta):
 		timeOfDayInWorldHours -= 24.0
 	
 	# update brightness
-	energy = darknessOverTimeOfDay.sample_baked(timeOfDayInWorldHours / 24.0);
+	energy = darknessOverTimeOfDay.sample_baked(timeOfDayInWorldHours / 24.0)
 	pass

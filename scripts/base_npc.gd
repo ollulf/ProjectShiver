@@ -54,6 +54,9 @@ func _process(delta):
 		
 	activeTask = taskQueue.pop_front()
 	
+func force_task(task):
+	activeTask = task
+	
 class TaskContext:
 	@export var Delta : float
 	var Npc : NPC
