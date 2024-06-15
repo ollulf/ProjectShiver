@@ -7,7 +7,7 @@ radius = 5.0
 
 [node name="Tree_2" type="StaticBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["wobbly"]]
 position = Vector2(2, -34)
 texture = ExtResource("1_8iy7t")
 

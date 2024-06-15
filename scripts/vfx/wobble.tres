@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://x8emyncykyx0"]
+
+[ext_resource type="Shader" path="res://scripts/vfx/wobble.gdshader" id="1_sohi8"]
+
+[resource]
+shader = ExtResource("1_sohi8")
+shader_parameter/amplitude = 0.2
+shader_parameter/frequency = 0.02
+shader_parameter/speed = 1.0
