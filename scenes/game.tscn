@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqtdfv5teghq0"]
+[gd_scene load_steps=4 format=3 uid="uid://dqtdfv5teghq0"]
 
 [ext_resource type="PackedScene" uid="uid://0bgwfvc6i83" path="res://scenes/player.tscn" id="1_gy6rk"]
 [ext_resource type="Texture2D" uid="uid://4ysxl6k2xqfb" path="res://assets/seed.png" id="2_oy0ng"]
+[ext_resource type="PackedScene" uid="uid://be30mdn7klwkj" path="res://scenes/donationBox.tscn" id="3_h5ih7"]
 
 [node name="Game" type="Node2D"]
 
@@ -10,3 +11,6 @@
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-22, -9)
 texture = ExtResource("2_oy0ng")
+
+[node name="DonationBox" parent="." instance=ExtResource("3_h5ih7")]
+position = Vector2(25, -28)
