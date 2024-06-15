@@ -1,13 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqtdfv5teghq0"]
+[gd_scene load_steps=11 format=3 uid="uid://dqtdfv5teghq0"]
 
 [ext_resource type="Texture2D" uid="uid://bklwtgcsvf4se" path="res://assets/ground.png" id="1_877h3"]
 [ext_resource type="PackedScene" uid="uid://0bgwfvc6i83" path="res://scenes/player.tscn" id="1_gy6rk"]
 [ext_resource type="Texture2D" uid="uid://4ysxl6k2xqfb" path="res://assets/seed.png" id="2_oy0ng"]
-[ext_resource type="PackedScene" uid="uid://bnif1npq2u1dh" path="res://scenes/ui.tscn" id="4_h457c"]
+[ext_resource type="PackedScene" path="res://scenes/ui.tscn" id="4_h457c"]
+[ext_resource type="PackedScene" uid="uid://dswhw36mi1b8e" path="res://scenes/Environment/Plants/plant_2.tscn" id="5_m4kh1"]
+[ext_resource type="PackedScene" uid="uid://jolnrlr2w7pb" path="res://scenes/Environment/Plants/plant_1.tscn" id="6_heu51"]
+[ext_resource type="PackedScene" uid="uid://dkxskf01k5u3n" path="res://scenes/Environment/Plants/plant_4.tscn" id="7_imvnf"]
+[ext_resource type="PackedScene" uid="uid://dfqnlsa3t1aun" path="res://scenes/Environment/Plants/plant_5.tscn" id="8_rspby"]
+[ext_resource type="PackedScene" uid="uid://daewhsw15w5p0" path="res://scenes/Environment/Plants/plant_6.tscn" id="9_0ehs4"]
+[ext_resource type="PackedScene" uid="uid://be30mdn7klwkj" path="res://scenes/Environment/donationBox.tscn" id="10_v22ho"]
 
 [node name="Game" type="Node2D"]
 
 [node name="ground" type="Sprite2D" parent="."]
+z_index = -2
 scale = Vector2(1000, 1000)
 texture = ExtResource("1_877h3")
 
@@ -18,3 +25,21 @@ position = Vector2(-22, -9)
 texture = ExtResource("2_oy0ng")
 
 [node name="UI" parent="." instance=ExtResource("4_h457c")]
+
+[node name="Plant2" parent="." instance=ExtResource("5_m4kh1")]
+position = Vector2(50, -59)
+
+[node name="Plant1" parent="." instance=ExtResource("6_heu51")]
+position = Vector2(66, -48)
+
+[node name="Plant3" parent="." instance=ExtResource("7_imvnf")]
+position = Vector2(73, 8)
+
+[node name="Plant4" parent="." instance=ExtResource("8_rspby")]
+position = Vector2(-77, -23)
+
+[node name="Plant5" parent="." instance=ExtResource("9_0ehs4")]
+position = Vector2(-48, -17)
+
+[node name="DonationBox" parent="." instance=ExtResource("10_v22ho")]
+position = Vector2(0, -61)
