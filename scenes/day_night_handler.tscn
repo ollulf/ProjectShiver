@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://btr81e4pjtx6h"]
+
+[ext_resource type="Script" path="res://scripts/day_night_handler.gd" id="1_urany"]
+
+[sub_resource type="Curve" id="Curve_eg6vk"]
+_data = [Vector2(0.039267, 1), 0.0, 0.0, 0, 0, Vector2(0.138743, 0.442197), -4.41618, -4.41618, 0, 0, Vector2(0.298429, 0), 0.0, 0.0, 0, 0, Vector2(0.730366, 0.0115607), 0.0, 0.0, 0, 0, Vector2(0.835079, 0.476879), 4.84082, 4.84082, 0, 0, Vector2(0.971204, 0.99711), 0.0, 0.0, 0, 0]
+point_count = 6
+
+[node name="day_night_handler" type="DirectionalLight2D"]
+color = Color(2.19928e-06, 0.412225, 0.540768, 1)
+energy = 0.0
+blend_mode = 2
+script = ExtResource("1_urany")
+darknessOverTimeOfDay = SubResource("Curve_eg6vk")
+WORLD_HOUR_DURATION_IN_REAL_SECONDS = 15.0
