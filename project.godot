@@ -20,6 +20,8 @@ config/icon="res://assets/icon.svg"
 DayNightHandler="*res://scenes/day_night_handler.tscn"
 MoneyHandler="*res://scripts/money_handler.gd"
 VfxHandler="*res://scripts/vfx/vfx_handler.gd"
+SpeechbubbleManger="*res://scripts/speech/speechbubble_manger.tscn"
+NpcHandler="*res://scenes/npc_handler.tscn"
 
 [display]
 

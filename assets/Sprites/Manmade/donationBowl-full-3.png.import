@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drbfhnrcuo6dd"
-path="res://.godot/imported/donationBox.png-4ddba966e98f164216ded02a06ef8b19.ctex"
+uid="uid://dpt3u5pney6m8"
+path="res://.godot/imported/donationBowl-full-3.png-6559c89e0f337de2af4cee4eeb412acc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Manmade/donationBox.png"
-dest_files=["res://.godot/imported/donationBox.png-4ddba966e98f164216ded02a06ef8b19.ctex"]
+source_file="res://assets/Sprites/Manmade/donationBowl-full-3.png"
+dest_files=["res://.godot/imported/donationBowl-full-3.png-6559c89e0f337de2af4cee4eeb412acc.ctex"]
 
 [params]
 

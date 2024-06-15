@@ -1,14 +1,31 @@
 extends Sprite2D
 
+var emptyBowl = load("res://assets/Sprites/Manmade/donationBowl-empty.png")
+var bowl_full_1 = load("res://assets/Sprites/Manmade/donationBowl-full-1.png")
+var bowl_full_2 = load("res://assets/Sprites/Manmade/donationBowl-full-2.png")
+var bowl_full_3 = load("res://assets/Sprites/Manmade/donationBowl-full-3.png")
 var donationLimit = 30
-var currentMoney = 15
+var currentMoney = 0
 
+func _ready():
+	_changeMoney(0)
+	
 func _changeMoney(amount):
 	currentMoney += amount
 	
 	if currentMoney > donationLimit:
 		currentMoney = donationLimit
-
+		
+	if(currentMoney < donationLimit * 0.3 ):
+		texture = emptyBowl
+	elif (currentMoney < donationLimit * 0.6):
+		texture = bowl_full_1
+	elif(currentMoney < donationLimit):
+		texture = bowl_full_2
+	else:
+		texture = bowl_full_3
+		
+		
 func _on_interactable_zone_action_signal():
 
 	if currentMoney > 0:
@@ -17,5 +34,9 @@ func _on_interactable_zone_action_signal():
 		print("retract", currentMoney)
 		
 	else:
-		print("no money available")
+		pass
+		#tweenOut = label.create_tween()
+		#tweenOut.set_parallel()
+		#tweenOut.tween_property(label, "modulate:a", 0, FADE_TIME)
+		#tweenOut.tween_property(label, "position", Vector2(labelOriginPosition.x, labelOriginPosition.y), FADE_TIME)
 
