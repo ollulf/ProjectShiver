@@ -1,13 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://du13hgd14qiid"]
 
-[ext_resource type="PackedScene" uid="uid://dabc8mvj713nn" path="res://scenes/functionality.tscn" id="9_qcmoy"]
+[ext_resource type="PackedScene" uid="uid://cqahx82dlecwi" path="res://scenes/functionality.tscn" id="9_qcmoy"]
 [ext_resource type="PackedScene" uid="uid://c6itcxf6w4oee" path="res://scenes/level.tscn" id="9_yjs30"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
 
 [node name="Level" parent="." instance=ExtResource("9_yjs30")]
-y_sort_enabled = true
 
 [node name="Functionality" parent="." instance=ExtResource("9_qcmoy")]
 y_sort_enabled = true

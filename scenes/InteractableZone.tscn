@@ -3,12 +3,14 @@
 [ext_resource type="Script" path="res://scripts/interactabletrigger.gd" id="1_3bepu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oo07x"]
+size = Vector2(29, 27)
 
 [node name="interactableZone" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_3bepu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_oo07x")
 
 [node name="Label" type="Label" parent="."]

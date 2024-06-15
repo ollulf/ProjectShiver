@@ -1,21 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://4b7qa8fg86nb"]
+[gd_scene load_steps=5 format=3 uid="uid://d1ukokw2wpy6h"]
 
 [ext_resource type="Texture2D" uid="uid://drbfhnrcuo6dd" path="res://assets/Sprites/Manmade/donationBox.png" id="1_sprpd"]
-[ext_resource type="PackedScene" path="res://scenes/InteractableZone.tscn" id="2_hm4i7"]
+[ext_resource type="Script" path="res://scenes/donation_bowl.gd" id="2_mer1o"]
+[ext_resource type="PackedScene" uid="uid://bdjsd2ljlp6fh" path="res://scenes/InteractableZone.tscn" id="4_n7rvs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wot8b"]
-size = Vector2(13, 11)
+size = Vector2(13, 10.5)
 
-[node name="DonationBowl" type="Sprite2D"]
+[node name="Donation_Bowl" type="Sprite2D"]
 position = Vector2(-34, 88)
 texture = ExtResource("1_sprpd")
 offset = Vector2(0, -15)
-
-[node name="InteractableZone" parent="." instance=ExtResource("2_hm4i7")]
-position = Vector2(1, -10)
+script = ExtResource("2_mer1o")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0.5, -5.5)
+position = Vector2(0.5, -5.25)
 shape = SubResource("RectangleShape2D_wot8b")
+
+[node name="interactableZone" parent="." instance=ExtResource("4_n7rvs")]
+position = Vector2(0, -10)
+
+[connection signal="action_signal" from="interactableZone" to="." method="_on_interactable_zone_action_signal"]

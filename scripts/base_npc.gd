@@ -17,4 +17,6 @@ func _physics_process(delta):
 	
 	velocity = lerp(velocity, direction * SPEED, delta * ACCELLERATION)
 	
+	
+	
 	move_and_slide()
