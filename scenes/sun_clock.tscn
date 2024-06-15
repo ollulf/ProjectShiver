@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://wdtx2rop3ead"]
+[gd_scene load_steps=4 format=3 uid="uid://tf0crqd7ys1u"]
 
 [ext_resource type="Texture2D" uid="uid://bvqegcbe2n8dy" path="res://assets/Sprites/Manmade/sunClock.png" id="1_msmkp"]
 [ext_resource type="Script" path="res://scenes/sun_clock.gd" id="2_d1x2b"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_fetta"]
+
 [node name="SunClock" type="Sprite2D"]
 texture = ExtResource("1_msmkp")
+offset = Vector2(0, -13)
 hframes = 8
 frame = 4
 script = ExtResource("2_d1x2b")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -10)
+shape = SubResource("CircleShape2D_fetta")
