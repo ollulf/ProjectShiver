@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnif1npq2u1dh"]
+
+[ext_resource type="Script" path="res://scripts/time_displayer.gd" id="1_ttfws"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="time-displayer" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_ttfws")
