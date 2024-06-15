@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bde43he54aipa"
-path="res://.godot/imported/Frog1_LeftArm.png-f6263d5c86561567c3a2d8a799f69253.ctex"
+uid="uid://dhrnaprg44huh"
+path="res://.godot/imported/Frog2_Body.png-a6f5c7ac1267a23d323a5e0ec9e4e36b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Characters/Frog1_LeftArm.png"
-dest_files=["res://.godot/imported/Frog1_LeftArm.png-f6263d5c86561567c3a2d8a799f69253.ctex"]
+source_file="res://assets/Sprites/Characters/Frog2_Body.png"
+dest_files=["res://.godot/imported/Frog2_Body.png-a6f5c7ac1267a23d323a5e0ec9e4e36b.ctex"]
 
 [params]
 
