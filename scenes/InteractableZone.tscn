@@ -15,9 +15,10 @@ shape = SubResource("RectangleShape2D_oo07x")
 
 [node name="Label" type="Label" parent="."]
 offset_left = -38.0
-offset_top = -51.0
+offset_top = -47.0
 offset_right = 38.0
-offset_bottom = 16.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(1, 1, 0.45098, 1)
 theme_override_font_sizes/font_size = 9
 text = "E"
 horizontal_alignment = 1
