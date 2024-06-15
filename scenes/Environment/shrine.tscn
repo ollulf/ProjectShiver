@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://me8302f5bq7c"]
+
+[ext_resource type="Texture2D" uid="uid://bh65denxum1bq" path="res://assets/Sprites/Manmade/shrine.png" id="1_s2i4q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gcy3o"]
+size = Vector2(62, 14)
+
+[node name="DonationBox" type="StaticBody2D"]
+texture_filter = 1
+position = Vector2(0, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 7)
+shape = SubResource("RectangleShape2D_gcy3o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -21)
+texture = ExtResource("1_s2i4q")
