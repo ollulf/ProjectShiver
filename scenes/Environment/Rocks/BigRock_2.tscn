@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqdi7a2581bko"]
+
+[ext_resource type="Texture2D" uid="uid://h4bf5d1iw0tu" path="res://assets/Sprites/Rocks/rock6.png" id="1_k2wwq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bm47j"]
+size = Vector2(46, 12)
+
+[node name="Plant1" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -19)
+texture = ExtResource("1_k2wwq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -5)
+shape = SubResource("RectangleShape2D_bm47j")

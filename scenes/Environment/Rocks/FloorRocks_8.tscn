@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkophbq71fuxo"]
+
+[ext_resource type="Texture2D" uid="uid://bf170k863sq8p" path="res://assets/Sprites/Rocks/rock12.png" id="1_tntbt"]
+
+[node name="Plant1" type="Sprite2D"]
+z_index = -1
+position = Vector2(1, -21)
+texture = ExtResource("1_tntbt")
