@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1ukokw2wpy6h"]
+
+[ext_resource type="Texture2D" uid="uid://drbfhnrcuo6dd" path="res://assets/Sprites/Manmade/donationBox.png" id="1_sprpd"]
+[ext_resource type="PackedScene" uid="uid://bdjsd2ljlp6fh" path="res://scenes/InteractableZone.tscn" id="2_hm4i7"]
+
+[node name="DonationBowl" type="Sprite2D"]
+position = Vector2(-34, 88)
+texture = ExtResource("1_sprpd")
+
+[node name="InteractableZone" parent="." instance=ExtResource("2_hm4i7")]
+position = Vector2(1, 5)
