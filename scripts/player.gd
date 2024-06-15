@@ -20,6 +20,9 @@ func player_movement(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		perform_action()
 	
+	if Input.is_key_pressed(KEY_O):
+		SpeechbubbleManger.say(self, "Hello!")
+	
 	if (input):
 		target_velocity = input.normalized() * WALK_SPEED
 		#sprite.direction = input.normalized()

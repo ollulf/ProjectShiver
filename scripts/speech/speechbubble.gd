@@ -2,7 +2,7 @@ extends PanelContainer
 
 var node : Node2D
 var text := ""
-var offset = Vector2(0,-40)
+var offset = Vector2(5,-60)
 
 func _ready():
 	position = node.get_global_transform_with_canvas().origin +offset

@@ -1,10 +1,33 @@
-[gd_scene load_steps=2 format=3 uid="uid://dx02uaybssvnd"]
+[gd_scene load_steps=6 format=3 uid="uid://dx02uaybssvnd"]
 
+[ext_resource type="Theme" uid="uid://dnhiup3pymhfa" path="res://assets/Sprites/UI/theme.tres" id="1_p0kbr"]
 [ext_resource type="Script" path="res://scripts/speech/speechbubble.gd" id="1_ql42f"]
+[ext_resource type="Texture2D" uid="uid://dawngd2o1kk2p" path="res://assets/Sprites/UI/Speechboubble.png" id="2_0c3v2"]
+[ext_resource type="Texture2D" uid="uid://d0u8efhoipwy5" path="res://assets/Sprites/UI/Speechboubble_triangle.png" id="4_xe6bp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g6w7q"]
+texture = ExtResource("2_0c3v2")
+texture_margin_left = 10.0
+texture_margin_top = 8.0
+texture_margin_right = 10.0
+texture_margin_bottom = 16.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+modulate_color = Color(0, 0, 0, 1)
 
 [node name="Speechbubble" type="PanelContainer"]
+theme = ExtResource("1_p0kbr")
+theme_override_styles/panel = SubResource("StyleBoxTexture_g6w7q")
 script = ExtResource("1_ql42f")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
-text = "Speechbubble"
+
+[node name="TextureRect" type="TextureRect" parent="Label"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+offset_left = -14.0
+offset_top = -3.0
+offset_right = 18.0
+offset_bottom = 29.0
+texture = ExtResource("4_xe6bp")
