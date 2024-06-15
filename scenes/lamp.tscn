@@ -1,8 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://s6tb73a6ul54"]
+[gd_scene load_steps=5 format=3 uid="uid://s6tb73a6ul54"]
 
 [ext_resource type="Texture2D" uid="uid://b4dhd4vuusq7b" path="res://assets/LightCone.png" id="1_0wytg"]
 [ext_resource type="Script" path="res://scenes/Lamp.gd" id="2_07l6y"]
+[ext_resource type="Texture2D" uid="uid://dhikndf54435n" path="res://assets/Sprites/Rocks/frogLamp.png" id="3_a6wsx"]
 
-[node name="Lamp" type="PointLight2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_1bkne"]
+radius = 8.0
+
+[node name="Lamp" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -21)
+texture = ExtResource("3_a6wsx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, -10)
+shape = SubResource("CircleShape2D_1bkne")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -7)
+scale = Vector2(0.13, 0.08)
+color = Color(0.478431, 0.882353, 1, 1)
 texture = ExtResource("1_0wytg")
 script = ExtResource("2_07l6y")

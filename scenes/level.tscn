@@ -37,22 +37,22 @@ agent_radius = 1.0
 [node name="Level" type="Node2D"]
 y_sort_enabled = true
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-visible = false
-navigation_polygon = SubResource("NavigationPolygon_3hnsb")
-
 [node name="ground" type="Sprite2D" parent="."]
 z_index = -2
 scale = Vector2(1000, 1000)
 texture = ExtResource("1_0flp6")
 
-[node name="Plant5" parent="." instance=ExtResource("7_psxg0")]
-position = Vector2(-60, -19)
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
+navigation_polygon = SubResource("NavigationPolygon_3hnsb")
+
+[node name="Shrine" parent="." instance=ExtResource("13_dljpd")]
+position = Vector2(-74, -85)
 
 [node name="SunClock" parent="." instance=ExtResource("9_wjoq0")]
 
 [node name="DonationBowl" parent="." instance=ExtResource("8_ra3s8")]
-position = Vector2(-15, -74)
+position = Vector2(139, 1)
 
 [node name="Trees" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -702,8 +702,8 @@ position = Vector2(89, 93)
 [node name="Plant23" parent="Plants" instance=ExtResource("6_hhqx0")]
 position = Vector2(-74, 118)
 
-[node name="Shrine" parent="." instance=ExtResource("13_dljpd")]
-position = Vector2(-74, -85)
+[node name="Plant29" parent="Plants" instance=ExtResource("7_psxg0")]
+position = Vector2(-60, -19)
 
 [node name="Rocks" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -814,3 +814,10 @@ position = Vector2(-18, -29)
 position = Vector2(174, 0)
 
 [node name="Lamp" parent="." instance=ExtResource("26_m0qi5")]
+position = Vector2(23, -66)
+
+[node name="Lamp2" parent="." instance=ExtResource("26_m0qi5")]
+position = Vector2(-206, -29)
+
+[node name="Lamp3" parent="." instance=ExtResource("26_m0qi5")]
+position = Vector2(22, 10)
