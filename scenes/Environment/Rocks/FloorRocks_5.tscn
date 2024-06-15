@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cci24x5bulmu8" path="res://assets/Sprites/Rocks/rock9.png" id="1_0u6gp"]
 
-[node name="Plant1" type="Sprite2D"]
+[node name="FloorRock" type="Sprite2D"]
 z_index = -1
 position = Vector2(1, -22)
 texture = ExtResource("1_0u6gp")
