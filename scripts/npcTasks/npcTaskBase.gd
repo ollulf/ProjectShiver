@@ -17,7 +17,10 @@ func process(delta):
 	return false
 	
 func is_at_target(taskContext):
-	return 	(taskContext.Npc.global_position - targetPositon).length() < 0.25
+	
+	var dist = abs(taskContext.Npc.global_position - targetPositon).length()
+	#print("check for dist: " + str(dist))
+	return 	dist < 100
 
 func get_target():
 	return targetPositon

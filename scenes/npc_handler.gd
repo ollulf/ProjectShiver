@@ -20,9 +20,7 @@ func _process(delta):
 		newNPC.global_position = npcSpawnPosition
 		npcs.append(newNPC)
 		add_child(newNPC)
-		print("spawn new npc to reach: " + str(npcTargetCount))
 	elif (npcCurrentCount > npcTargetCount):
 		npcs.pop_front().force_task(leaveTask.new(npcSpawnPosition.x, npcSpawnPosition.y))
-		print("delete npc to reach: " + str(npcTargetCount))
 	
 	pass

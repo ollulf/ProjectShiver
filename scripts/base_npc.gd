@@ -11,10 +11,15 @@ var taskQueue = []
 var activeTask;
 var taskContext;
 
+var destroyed = false
+
 func _ready():
 	taskContext = TaskContext.new(self)
 
 func _physics_process(delta):
+
+	if destroyed:
+		return
 
 	if activeTask == null:
 		return
@@ -33,6 +38,9 @@ func _physics_process(delta):
 
 func _process(delta):
 	
+	if destroyed:
+		return
+	
 	taskContext.Delta = delta
 	
 	if activeTask != null:
@@ -49,15 +57,14 @@ func _process(delta):
 			SpeechbubbleManger.say(self, "Croak")
 		
 		if rng.randf() < 0.5:
-			print("append new wait task")
 			taskQueue.append(npcTaskBase.new(12,12))
 		else:
-			print("append new base task")
 			taskQueue.append(npcTaskBase.new(-7,-7))
 		
-	activeTask = taskQueue.pop_front()
+	force_task(taskQueue.pop_front())
 	
 func force_task(task):
+	#print("force task: " + str(task))
 	activeTask = task
 	
 class TaskContext:
@@ -66,4 +73,3 @@ class TaskContext:
 	
 	func _init(npc):
 		Npc = npc
-		
