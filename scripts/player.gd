@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
+class_name Player
 
 const WALK_SPEED = 50.0
 const SMOOTHING = .1
+var currentInteractable
 
 @onready var sprite = $sprite
 
@@ -15,6 +17,9 @@ func player_movement(delta):
 	
 	var target_velocity = Vector2(0,0)
 	
+	if Input.is_action_just_pressed("ui_accept"):
+		perform_action()
+	
 	if (input):
 		target_velocity = input.normalized() * WALK_SPEED
 		sprite.direction = input.normalized()
@@ -24,3 +29,15 @@ func player_movement(delta):
 	velocity = lerp(velocity, target_velocity, SMOOTHING)
 	
 	move_and_slide()
+	
+func perform_action():
+	
+	print ("E")
+	if currentInteractable != null:
+		(currentInteractable as Interactable)._fireAction()
+	else:
+		print("interactablezone is null")
+		
+func change_interactable(InteractableZone):
+		currentInteractable = InteractableZone
+		print(InteractableZone)
