@@ -1,5 +1,9 @@
 extends Node
 
+var all_items := ["Apple", "Baby", "Bouquet", "Candle", "Meat", "Poop"]
+
+func spawn_and_pick_up_random(target:Node2D):
+	spawn_and_pick_up(all_items.pick_random(), target)
 
 func spawn_and_pick_up(name:String, target:Node2D):
 	

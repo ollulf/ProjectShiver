@@ -35,7 +35,7 @@ func player_movement(delta):
 		SpeechbubbleManger.say(self, "Hello!")
 	
 	if Input.is_key_pressed(KEY_5) and not currentPickup:
-		PickupFactory.spawn_and_pick_up("Apple", self)
+		PickupFactory.spawn_and_pick_up_random(self)
 	
 	if (input):
 		target_velocity = input.normalized() * WALK_SPEED
@@ -61,6 +61,8 @@ func change_interactable(target, active:bool):
 
 func change_pickup(target, active:bool):
 	if active:
+		if currentPickup:
+			currentPickup.drop()
 		currentPickup = target
 	elif currentPickup == target:
 		currentPickup = null
