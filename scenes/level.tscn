@@ -37,7 +37,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-187, -36, -163, -60, -
 source_geometry_group_name = &"navigation_polygon_source_group"
 agent_radius = 1.0
 
-[node name="Level" type="Node2D"]
+[node name="Level" type="Node2D" groups=["level"]]
 y_sort_enabled = true
 
 [node name="ground" type="Sprite2D" parent="."]
