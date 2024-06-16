@@ -5,8 +5,17 @@ class_name Player
 const WALK_SPEED = 50.0
 const SMOOTHING = .1
 var currentInteractable
+var currentPickup
+
+static var instance
 
 @onready var sprite = $sprite
+
+func _init():
+	instance = self
+
+func _exit_tree():
+	instance = null
 
 func _physics_process(delta):
 	player_movement(delta)
@@ -34,13 +43,22 @@ func player_movement(delta):
 	move_and_slide()
 	
 func perform_action():
-	
-	print ("E")
-	if currentInteractable != null:
-		(currentInteractable as Interactable)._fireAction()
-	else:
-		print("interactablezone is null")
+	if currentInteractable:
+		currentInteractable.fireAction()
+	elif currentPickup:
+		currentPickup.drop()
 		
-func change_interactable(InteractableZone):
-		currentInteractable = InteractableZone
-		print(InteractableZone)
+func change_interactable(target, active:bool):
+	if active:
+		currentInteractable = target
+	elif currentInteractable == target:
+		currentInteractable = null
+
+func change_pickup(target, active:bool):
+	if active:
+		currentPickup = target
+	elif currentPickup == target:
+		currentPickup = null
+
+static func get_instance():
+	return instance
