@@ -34,12 +34,8 @@ func player_movement(delta):
 	move_and_slide()
 	
 func perform_action():
-	
-	print ("E")
 	if currentInteractable != null:
 		(currentInteractable as Interactable)._fireAction()
-	else:
-		print("interactablezone is null")
 		
 func change_interactable(InteractableZone):
 		currentInteractable = InteractableZone

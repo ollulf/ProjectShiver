@@ -13,12 +13,6 @@ func _ready():
 func _process(delta):
 	pass
 
-func _on_interactable_zone_action_signal():
-	var instance = preload("res://scenes/effects/offerEffect.tscn").instantiate()
-	add_child(instance)
-	#Do check if player has correct item
-	#Delete Item that the player uses on the shrine
-
 func npc_pray():
 	var instance = preload("res://scenes/effects/offerEffect.tscn").instantiate()
 	add_child(instance)
