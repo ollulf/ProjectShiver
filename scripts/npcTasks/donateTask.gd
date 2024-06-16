@@ -6,7 +6,7 @@ var targetBowl : DonationBowl
 
 func _init():
 	targetBowl = DonationBowl.Bowls.pick_random()
-	targetPositon = targetBowl.global_position
+	targetPositon = targetBowl.navigation_target.global_position
 	
 func process(context):
 	if is_at_target(context):
@@ -15,7 +15,6 @@ func process(context):
 		return true
 	
 	return false
-	
 	
 func get_name():
 	return "donate task"

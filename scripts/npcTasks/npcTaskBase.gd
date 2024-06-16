@@ -8,10 +8,10 @@ var startTime = null
 func _init(x, y):
 	targetPositon = Vector2(x,y)
 
-func process(delta):
+func process(context):
 	if startTime == null:
 		startTime = Time.get_ticks_msec()
-	elif startTime + 2000.0 < Time.get_ticks_msec():
+	elif startTime + 10000.0 < Time.get_ticks_msec():
 		return true
 	
 	return false
@@ -20,7 +20,7 @@ func is_at_target(taskContext):
 	
 	var dist = abs(taskContext.Npc.global_position - targetPositon).length()
 	#print("check for dist: " + str(dist))
-	return 	dist < 100
+	return 	dist < 10
 
 func get_target():
 	return targetPositon

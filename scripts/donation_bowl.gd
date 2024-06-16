@@ -10,6 +10,8 @@ var currentMoney = 0
 
 static var Bowls = []
 
+@onready var navigation_target = $navigation_target
+
 func _ready():
 	_changeMoney(0)
 	Bowls.append(self)
