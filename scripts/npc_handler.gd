@@ -20,6 +20,7 @@ func _process(delta):
 		newNPC.global_position = npcSpawnPosition
 		npcs.append(newNPC)
 		get_tree().get_first_node_in_group("level").add_child(newNPC)
+		PickupFactory.spawn_and_pick_up_random(newNPC)
 	elif (npcCurrentCount > npcTargetCount):
 		npcs.pop_front().force_task(leaveTask.new(npcSpawnPosition.x, npcSpawnPosition.y))
 	
