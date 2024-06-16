@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/vfx/timer.gd" id="1_nldbd"]
 [ext_resource type="Texture2D" uid="uid://bbxkit8oiv34f" path="res://assets/Sprites/effects/offerEffect.png" id="2_gov1k"]
-[ext_resource type="AudioStream" uid="uid://datjkvqecx8a0" path="res://sound/shrineOffering.wav" id="3_f1bgt"]
+[ext_resource type="AudioStream" uid="uid://datjkvqecx8a0" path="res://assets/audio/sounds/shrineOffering.wav" id="3_hvwid"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sgg6w"]
 atlas = ExtResource("2_gov1k")
@@ -79,4 +79,4 @@ frame = 7
 frame_progress = 1.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_f1bgt")
+stream = ExtResource("3_hvwid")

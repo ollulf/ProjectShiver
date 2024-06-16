@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://dahgcib1djtmb"]
+
+[ext_resource type="Script" path="res://scripts/vfx/timer.gd" id="1_oiafu"]
+[ext_resource type="Texture2D" uid="uid://dpvxmt1heucaj" path="res://assets/Sprites/effects/poof.png" id="2_fh1go"]
+[ext_resource type="AudioStream" uid="uid://d2jx5b6unmj2s" path="res://assets/audio/sounds/soil.wav" id="3_kioon"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4cc3"]
+atlas = ExtResource("2_fh1go")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksa43"]
+atlas = ExtResource("2_fh1go")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aa3g7"]
+atlas = ExtResource("2_fh1go")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqex1"]
+atlas = ExtResource("2_fh1go")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3s7fq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4cc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksa43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aa3g7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqex1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="OfferEffect" type="Node2D"]
+script = ExtResource("1_oiafu")
+duration = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -13)
+sprite_frames = SubResource("SpriteFrames_3s7fq")
+frame_progress = 0.794172
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_kioon")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://me8302f5bq7c"]
 
-[ext_resource type="Script" path="res://scripts/Shrine.gd" id="1_hmnqo"]
+[ext_resource type="Script" path="res://scripts/misc/Shrine.gd" id="1_brlrd"]
 [ext_resource type="Texture2D" uid="uid://bh65denxum1bq" path="res://assets/Sprites/Manmade/shrine.png" id="2_fqf4h"]
 [ext_resource type="PackedScene" uid="uid://3ckopbhej41u" path="res://scenes/InteractableZone.tscn" id="3_22ssc"]
 
@@ -10,7 +10,7 @@ size = Vector2(62, 14)
 [node name="Shrine" type="StaticBody2D"]
 texture_filter = 1
 position = Vector2(0, -15)
-script = ExtResource("1_hmnqo")
+script = ExtResource("1_brlrd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 7)

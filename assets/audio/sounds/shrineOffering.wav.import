@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://datjkvqecx8a0"
-path="res://.godot/imported/shrineOffering.wav-0a0eb425578713b0a7e76c5e76578bd7.sample"
+path="res://.godot/imported/shrineOffering.wav-22f5719b04a85e64b548d3127dbd451d.sample"
 
 [deps]
 
-source_file="res://sound/shrineOffering.wav"
-dest_files=["res://.godot/imported/shrineOffering.wav-0a0eb425578713b0a7e76c5e76578bd7.sample"]
+source_file="res://assets/audio/sounds/shrineOffering.wav"
+dest_files=["res://.godot/imported/shrineOffering.wav-22f5719b04a85e64b548d3127dbd451d.sample"]
 
 [params]
 

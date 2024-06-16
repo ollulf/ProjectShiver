@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhmf0ba63ohkh"]
+
+[ext_resource type="Script" path="res://scripts/misc/driedPlant.gd" id="1_u4w7l"]
+[ext_resource type="Texture2D" uid="uid://be0wacrj0gfap" path="res://assets/Sprites/Environment/driedPlant_1.png" id="2_u2rsa"]
+[ext_resource type="PackedScene" uid="uid://3ckopbhej41u" path="res://scenes/InteractableZone.tscn" id="3_m5ioh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_146ra"]
+radius = 13.0384
+
+[node name="DriedPlant1" type="Node2D"]
+script = ExtResource("1_u4w7l")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_146ra")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -17)
+texture = ExtResource("2_u2rsa")
+
+[node name="interactableZone" parent="." instance=ExtResource("3_m5ioh")]
+position = Vector2(0, -8)
+
+[connection signal="action_signal" from="interactableZone" to="." method="_on_interactable_zone_action_signal"]
