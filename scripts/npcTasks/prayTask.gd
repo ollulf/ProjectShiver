@@ -1,5 +1,4 @@
 extends "res://scripts/npcTasks/npcTaskBase.gd"
-
 class_name _prayTask
 
 var targetShrine : Shrine

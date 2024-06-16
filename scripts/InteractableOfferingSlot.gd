@@ -1,6 +1,8 @@
 extends Node2D
 class_name OfferingSlot
 
+@onready var navigation_target = $navigation_target
+
 var currentPickup
 static var All = []
 
