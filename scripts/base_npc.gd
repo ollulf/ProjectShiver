@@ -61,6 +61,10 @@ func pick_random_task():
 	var options = []
 	
 	add_chance_based(options, 10, _prayTask.new())
+	
+	if (currentPickup != null):
+		add_chance_based(options, 10, offerTask.new())
+	
 	#add check if has money
 	add_chance_based(options, 8, donateTask.new())
 	
