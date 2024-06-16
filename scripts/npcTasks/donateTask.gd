@@ -10,8 +10,8 @@ func _init():
 	
 func process(context):
 	if is_at_target(context):
-		targetBowl._changeMoney(targetBowl.currentMoney + randf_range(1,3))
-		print("donate")
+		targetBowl.add_money(int(randf_range(1,4)))
+		SpeechbubbleManger.say(context.Npc, "For my sins!")
 		return true
 	
 	return false

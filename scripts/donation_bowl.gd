@@ -13,10 +13,10 @@ static var Bowls = []
 @onready var navigation_target = $navigation_target
 
 func _ready():
-	_changeMoney(0)
+	add_money(0)
 	Bowls.append(self)
 	
-func _changeMoney(amount):
+func add_money(amount):
 	currentMoney += amount
 	
 	if currentMoney > donationLimit:
@@ -34,8 +34,8 @@ func _changeMoney(amount):
 func _on_interactable_zone_action_signal():
 
 	if currentMoney > 0:
-		MoneyHandler.UpdateMoney(currentMoney)
-		_changeMoney(-currentMoney)
+		MoneyHandler.UpdateMoney(MoneyHandler.currentPlayerMoney + currentMoney)
+		add_money(-currentMoney)
 		print("retract", currentMoney)
 		
 	else:
