@@ -23,7 +23,8 @@ func pick_up(target:Node2D):
 	picked_up = true
 	$interactableZone.set_disabled(true)
 	var p = global_position
-	get_parent().remove_child(self)
+	if get_parent():
+		get_parent().remove_child(self)
 	
 	var parent = target
 	if target.has_method("get_pickup_parent"):
