@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://wcspsgk04l8x" path="res://assets/Sprites/Characters/Main-Frog.png" id="3_6i6q2"]
 [ext_resource type="Script" path="res://scripts/character_tween_animator.gd" id="4_5lwjq"]
 [ext_resource type="Texture2D" uid="uid://bde43he54aipa" path="res://assets/Sprites/Characters/Frog1_LeftArm.png" id="5_svy0h"]
-[ext_resource type="Texture2D" uid="uid://g3aj6mqppcue" path="res://assets/Sprites/Characters/Frog1_Arms.png" id="6_n30p1"]
+[ext_resource type="Texture2D" uid="uid://b42hxgqs2lb3q" path="res://assets/Sprites/Characters/Main-Frog_Arms-export.png" id="6_nqgac"]
 [ext_resource type="AudioStream" uid="uid://cc7u853tolaj2" path="res://assets/audio/music/Frog (Croaking).mp3" id="7_qaiyg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8lxmi"]
@@ -44,7 +44,7 @@ offset = Vector2(9, 4)
 
 [node name="carry" type="Sprite2D" parent="sprite"]
 position = Vector2(4, -8)
-texture = ExtResource("6_n30p1")
+texture = ExtResource("6_nqgac")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
