@@ -55,6 +55,10 @@ func _process(delta):
 		
 		var rng = RandomNumberGenerator.new()
 		
+		if rng.randf() < 0.05:
+			pass
+			#taskQueue.append(poopTask.new())
+		
 		if rng.randf() < 0.1:
 			SpeechbubbleManger.say(self, "Croak")
 		
@@ -63,7 +67,8 @@ func _process(delta):
 		elif rng.randf() > 0.5:
 			taskQueue.append(prayTask.new())
 		else:
-			taskQueue.append(waitTask.new(-7,-7))
+			var point = NavigationHelper.get_random_point()
+			taskQueue.append(waitTask.new(point.x,point.y))
 		
 	force_task(taskQueue.pop_front())
 	
