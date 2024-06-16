@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://dp2p6uawrb5in"]
 
-[ext_resource type="AudioStream" uid="uid://hxb05mwi3l43" path="res://assets/audio/music/day-placeholder.mp3" id="1_i7c2l"]
+[ext_resource type="AudioStream" uid="uid://di53bvskdobic" path="res://assets/audio/music/Shrine Keeper - Daytime A.mp3" id="1_l1hq0"]
 [ext_resource type="AudioStream" uid="uid://bp3m23aoubgtp" path="res://assets/audio/music/night-placeholder.mp3" id="2_lhyxg"]
 
 [node name="Node" type="Node"]
 
 [node name="DayMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_i7c2l")
+stream = ExtResource("1_l1hq0")
 autoplay = true
 bus = &"Music"
 
