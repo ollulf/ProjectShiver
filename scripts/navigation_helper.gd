@@ -39,5 +39,4 @@ func get_random_min_max():
 		)
 		inited = true
 	
-	print("picked random point between: " + str(min) + " and " + str(max))
 	return Vector2(randf_range(min.x, max.x), randf_range(min.y, max.y))
