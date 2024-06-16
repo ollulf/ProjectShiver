@@ -23,8 +23,9 @@ VfxHandler="*res://scripts/vfx/vfx_handler.gd"
 SpeechbubbleManger="*res://scripts/speech/speechbubble_manger.tscn"
 NpcHandler="*res://scenes/npc_handler.tscn"
 MusicPlayer="*res://scenes/music_player.tscn"
-PickupFactory="*res://scenes/items/pickup_factory.gd"
 SpiritHandler="*res://scripts/spirit_handler.gd"
+PickupFactory="*res://scenes/items/pickup_factory.gd"
+NavigationHelper="*res://scripts/navigation_helper.gd"
 
 [display]
 

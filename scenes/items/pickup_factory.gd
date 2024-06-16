@@ -7,16 +7,29 @@ func spawn_and_pick_up_random(target:Node2D):
 
 func spawn_and_pick_up(name:String, target:Node2D):
 	
+	var inst = spawn_base(name)
+	inst.pick_up(target)
+		
+func spawn_and_place(name:String, target:Vector2):
+	var inst = spawn_base(name)
+	inst.global_position = target
+	var root = get_tree().get_first_node_in_group("level")
+	var p = target
+	root.add_child(inst)
+
+func spawn_base(name:String):
+	
+	var inst
+	
 	var n = "res://scenes/items/pickup_"+ name + ".tscn"
 	
 	if ResourceLoader.exists(n):
 		var i = load(n)
-		var inst = i.instantiate()
-		inst.pick_up(target)
+		inst = i.instantiate()
 	else:
 		var tex = load("res://assets/Sprites/Item/Item-"+ name +".png")
 		if tex:
-			var inst = preload("res://scenes/items/pickup_base.tscn").instantiate()
+			inst = preload("res://scenes/items/pickup_base.tscn").instantiate()
 			inst.set_tex(tex)
-			inst.pick_up(target)
-		
+	
+	return inst

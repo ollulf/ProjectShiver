@@ -1,6 +1,6 @@
 extends "res://scripts/npcTasks/npcTaskBase.gd"
 
-class_name prayTask
+class_name _prayTask
 
 var targetShrine : Shrine
 var timeSpentPraying = 0.0

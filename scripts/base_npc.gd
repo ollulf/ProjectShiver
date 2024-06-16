@@ -52,21 +52,39 @@ func _process(delta):
 			return
 			
 	if taskQueue.size() == 0:
-		
-		var rng = RandomNumberGenerator.new()
-		
-		if rng.randf() < 0.1:
-			SpeechbubbleManger.say(self, "Croak")
-		
-		if rng.randf() < 0.3:
-			taskQueue.append(donateTask.new())
-		elif rng.randf() > 0.5:
-			taskQueue.append(prayTask.new())
-		else:
-			taskQueue.append(waitTask.new(-7,-7))
+		taskQueue.append(pick_random_task())
 		
 	force_task(taskQueue.pop_front())
+
+func pick_random_task():
 	
+	var options = []
+	
+	add_chance_based(options, 10, _prayTask.new())
+	#add check if has money
+	add_chance_based(options, 8, donateTask.new())
+	
+	var point = NavigationHelper.get_random_point()
+	add_chance_based(options, 8, waitTask.new(point.x,point.y))
+	
+	add_chance_based(options, 1, poopTask.new())
+
+	var random = options.pick_random()
+	
+	#var occurences = 0
+	
+	#for o in options:
+	#	if o == random:
+	#		occurences+=1
+	
+	#print("picked " + random.get_name() + " by chance of " + str(occurences))
+	
+	return random
+	
+func add_chance_based(options, amount, task):
+	for i in amount:
+		options.append(task)
+
 func force_task(task):
 	activeTask = task
 	#SpeechbubbleManger.say(self, task.get_name())
