@@ -12,9 +12,11 @@ var activeTask;
 var taskContext;
 
 var destroyed = false
+var currentPickup
 
 func _ready():
 	taskContext = TaskContext.new(self)
+	$Sprite/carry.visible = false
 
 func _physics_process(delta):
 
@@ -68,7 +70,18 @@ func _process(delta):
 func force_task(task):
 	activeTask = task
 	#SpeechbubbleManger.say(self, task.get_name())
-	
+
+func change_pickup(target, active:bool):
+	if active:
+		currentPickup = target
+	elif currentPickup == target:
+		currentPickup = null
+		
+	$Sprite/carry.visible = currentPickup != null
+
+func get_pickup_parent():
+	return $Sprite/carry
+
 class TaskContext:
 	@export var Delta : float
 	var Npc : NPC
