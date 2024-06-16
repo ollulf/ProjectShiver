@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://c6itcxf6w4oee"]
+[gd_scene load_steps=34 format=3 uid="uid://c6itcxf6w4oee"]
 
 [ext_resource type="Texture2D" uid="uid://bklwtgcsvf4se" path="res://assets/ground.png" id="1_0flp6"]
 [ext_resource type="PackedScene" uid="uid://me8302f5bq7c" path="res://scenes/environment/manmade/shrine.tscn" id="2_1onby"]
@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://buusk6br2fcul" path="res://scenes/environment/manmade/EntranceRock_2.tscn" id="28_5apn8"]
 [ext_resource type="PackedScene" uid="uid://xalkknyn38ck" path="res://scenes/environment/Rocks/RockWall_1.tscn" id="29_o1nat"]
 [ext_resource type="PackedScene" uid="uid://bhmf0ba63ohkh" path="res://scenes/interactables/driedPlant_1.tscn" id="31_vmv7s"]
+[ext_resource type="PackedScene" uid="uid://byup8edav7tbp" path="res://scenes/environment/manmade/theHole.tscn" id="32_134x3"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_3hnsb"]
 vertices = PackedVector2Array(169, -94, 168, -94, 195, -101, 209, 130, 245, 161, 191, 183, 149, 156, 148, 85, 267, -71, 285, -36, 297, 14, 196, 1, 195, -14, 230, -61, -55, 17, 164, 7, 292, 32, 64, 24, -140, -136, -116, -141, -118, -114, -141, -78, -111, -101, -111, -100, 208, 88, 171, 80, -26, -138, -3, -135, -15, -103, -40, -98, -220, 68, -186, -35, -162, -59, -104, -88, -107, -69, -145, 10, -180, 44, 219, -68, 169, -19, 262, 36, 260, 68, 170, 66, 102, 62, 97, 46, 27, 82, -159, 96, -220, 94, -88, 74, 119, 87, 117, 108, 83, 107, 80, 90, 12, 103, 38, 120, 33, 129, -2, 133, -72, 121, -115, 121, -157, 119, 60, 77, 82, 65, -264, 41, -307, 44, -322, -6, -297, -51, -252, -38, -214, -27, -7, 151, -63, 151, 146, -62, 208, -90, 145, -4, 131, -64, 95, -50, -45, -88, 1, -80, -41, -70, 68, -45, 12, -72, 26, -75, 32, -71, 34, -61, 48, -52, -97, -9, -162, 66, -121, 61, 216, 72, 65, 61, 53, 46, 51, 34, -66, 52)
@@ -2304,3 +2305,6 @@ position = Vector2(183, 77)
 
 [node name="DriedPlant1" parent="." instance=ExtResource("31_vmv7s")]
 position = Vector2(-42, 31)
+
+[node name="TheHole" parent="." instance=ExtResource("32_134x3")]
+position = Vector2(-40, 79)

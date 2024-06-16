@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://byup8edav7tbp"]
+
+[ext_resource type="Texture2D" uid="uid://diqimpynb7c0j" path="res://assets/Sprites/Manmade/theHole.png" id="1_x2gto"]
+
+[node name="TheHole" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 12)
+texture = ExtResource("1_x2gto")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-9, 30, -20, 22, -18, 11, -11, 4, -1, 3, -2, 9, 2, 11, 6, 13, 9, 13, 17, 9, 21, 15, 19, 23, 12, 31, -2, 31)
