@@ -57,7 +57,7 @@ func _process(delta):
 		
 		if rng.randf() < 0.05:
 			pass
-			#taskQueue.append(poopTask.new())
+			taskQueue.append(poopTask.new())
 		
 		if rng.randf() < 0.1:
 			SpeechbubbleManger.say(self, "Croak")
