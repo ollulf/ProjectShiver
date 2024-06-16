@@ -23,13 +23,12 @@ VfxHandler="*res://scripts/vfx/vfx_handler.gd"
 SpeechbubbleManger="*res://scripts/speech/speechbubble_manger.tscn"
 NpcHandler="*res://scenes/npc_handler.tscn"
 MusicPlayer="*res://scenes/music_player.tscn"
-PickupFactory="*res://scenes/items/pickup_factory.gd"
+SpiritHandler="*res://scripts/spirit_handler.gd"
 
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/scale=4.0
-window/stretch/scale_mode="integer"
 
 [input]
 
