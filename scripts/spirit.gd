@@ -2,10 +2,16 @@ extends Node2D
 
 @onready var sprite = $Sprite2D
 var isVisible = true
+var slot
+var desiredPickup
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	desiredPickup = PickupFactory.all_items.pick_random()
+
+func assign_slot(slot):
+	self.slot = slot
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -26,3 +32,9 @@ func _process(delta):
 		tween.tween_property(sprite, "modulate:a", 1.0, 1.0)
 	else:
 		tween.tween_property(sprite, "modulate:a", 0.0, 1.0)
+
+func _on_info_trigger_body_entered(body):
+	if (!isVisible):
+		return
+		
+	SpeechbubbleManger.say(self, "I want " + desiredPickup)
