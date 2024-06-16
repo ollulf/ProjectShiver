@@ -1,4 +1,5 @@
 extends Sprite2D
+class_name DonationBowl
 
 var emptyBowl = load("res://assets/Sprites/Manmade/donationBowl-empty.png")
 var bowl_full_1 = load("res://assets/Sprites/Manmade/donationBowl-full-1.png")
@@ -7,8 +8,11 @@ var bowl_full_3 = load("res://assets/Sprites/Manmade/donationBowl-full-3.png")
 var donationLimit = 30
 var currentMoney = 0
 
+static var Bowls = []
+
 func _ready():
 	_changeMoney(0)
+	Bowls.append(self)
 	
 func _changeMoney(amount):
 	currentMoney += amount
@@ -24,7 +28,6 @@ func _changeMoney(amount):
 		texture = bowl_full_2
 	else:
 		texture = bowl_full_3
-		
 		
 func _on_interactable_zone_action_signal():
 

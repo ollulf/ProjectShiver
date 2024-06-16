@@ -24,3 +24,6 @@ func is_at_target(taskContext):
 
 func get_target():
 	return targetPositon
+	
+func get_name():
+	return "base task"
