@@ -19,9 +19,9 @@ func _process(delta):
 		var randomSlot = OfferingSlot.All.pick_random()
 			
 		if !slotSpiritDict.has(randomSlot):
-		
 			var newSpirit = BASE_SPIRIT.instantiate()
 			newSpirit.global_position = randomSlot.global_position
+			newSpirit.assign_slot(randomSlot)
 			slotSpiritDict[randomSlot] = newSpirit
 			Spririts.append(newSpirit)
 			add_child(newSpirit)

@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgfjp83iqqq78"]
+[gd_scene load_steps=4 format=3 uid="uid://dgfjp83iqqq78"]
 
 [ext_resource type="Texture2D" uid="uid://cjfo834og4yk4" path="res://assets/Sprites/Characters/Ghost1_Body.png" id="1_a1qof"]
 [ext_resource type="Script" path="res://scripts/spirit.gd" id="1_qlmkl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ctnv5"]
+radius = 23.0
 
 [node name="Spirit" type="Node2D"]
 script = ExtResource("1_qlmkl")
@@ -10,3 +13,12 @@ script = ExtResource("1_qlmkl")
 z_index = 1
 texture = ExtResource("1_a1qof")
 offset = Vector2(2.08165e-12, -8)
+
+[node name="info_trigger" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="info_trigger"]
+position = Vector2(0, 11)
+shape = SubResource("CircleShape2D_ctnv5")
+
+[connection signal="body_entered" from="info_trigger" to="." method="_on_info_trigger_body_entered"]
