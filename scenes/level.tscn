@@ -1,7 +1,8 @@
-[gd_scene load_steps=31 format=3 uid="uid://c6itcxf6w4oee"]
+[gd_scene load_steps=32 format=3 uid="uid://c6itcxf6w4oee"]
 
 [ext_resource type="Texture2D" uid="uid://bklwtgcsvf4se" path="res://assets/ground.png" id="1_0flp6"]
 [ext_resource type="PackedScene" uid="uid://me8302f5bq7c" path="res://scenes/environment/manmade/shrine.tscn" id="2_1onby"]
+[ext_resource type="PackedScene" uid="uid://cgj40hrkqq7my" path="res://scenes/environment/manmade/shrineOvergrown.tscn" id="3_086x4"]
 [ext_resource type="PackedScene" uid="uid://dswhw36mi1b8e" path="res://scenes/environment/Plants/plant_2.tscn" id="3_n4gi2"]
 [ext_resource type="PackedScene" uid="uid://jolnrlr2w7pb" path="res://scenes/environment/Plants/plant_1.tscn" id="4_m8ofo"]
 [ext_resource type="PackedScene" uid="uid://dkxskf01k5u3n" path="res://scenes/environment/Plants/plant_4.tscn" id="5_tie3u"]
@@ -58,6 +59,13 @@ navigation_polygon = SubResource("NavigationPolygon_3hnsb")
 
 [node name="Shrine" parent="." instance=ExtResource("2_1onby")]
 position = Vector2(-74, -85)
+
+[node name="ShrineOvergrown" parent="." instance=ExtResource("3_086x4")]
+position = Vector2(186, -62)
+
+[node name="ShrineOvergrown2" parent="." instance=ExtResource("3_086x4")]
+y_sort_enabled = true
+position = Vector2(-265, -42)
 
 [node name="SunClock" parent="." instance=ExtResource("9_wjoq0")]
 position = Vector2(85, 62)
