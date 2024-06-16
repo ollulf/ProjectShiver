@@ -32,4 +32,6 @@ func spawn_base(name:String):
 			inst = preload("res://scenes/items/pickup_base.tscn").instantiate()
 			inst.set_tex(tex)
 	
+	inst.set_name(name)
+	
 	return inst

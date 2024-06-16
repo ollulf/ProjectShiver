@@ -7,6 +7,9 @@ var desiredPickup
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	isVisible = false
+	sprite.modulate.a = 0.0
+	
 	desiredPickup = PickupFactory.all_items.pick_random()
 
 func assign_slot(slot):
@@ -37,4 +40,9 @@ func _on_info_trigger_body_entered(body):
 	if (!isVisible):
 		return
 		
-	SpeechbubbleManger.say(self, "I want " + desiredPickup)
+	if (slot.currentPickup != null and slot.currentPickup.get_name() == desiredPickup):		
+		SpeechbubbleManger.say(self, "thank you")
+		slot.currentPickup.pick_up(self)
+		queue_free()
+	else:
+		SpeechbubbleManger.say(self, "I want " + desiredPickup)
