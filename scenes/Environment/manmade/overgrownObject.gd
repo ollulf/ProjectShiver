@@ -6,6 +6,7 @@ func _convertObject():
 	add_sibling(instance)
 	instance = preload("res://scenes/effects/poofEffect.tscn").instantiate()
 	add_sibling(instance)
+	queue_free()
 
 
 func _on_interactable_zone_on_interact():
