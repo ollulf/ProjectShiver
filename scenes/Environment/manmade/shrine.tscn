@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/misc/Shrine.gd" id="1_brlrd"]
 [ext_resource type="Texture2D" uid="uid://bh65denxum1bq" path="res://assets/Sprites/Manmade/shrine.png" id="2_fqf4h"]
-[ext_resource type="PackedScene" uid="uid://bdjsd2ljlp6fh" path="res://scenes/InteractableZone.tscn" id="3_22ssc"]
+[ext_resource type="PackedScene" uid="uid://bxsrbvmx4nh82" path="res://scenes/interactable_offering_slot.tscn" id="3_u76y4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gcy3o"]
 size = Vector2(62, 14)
@@ -20,9 +20,6 @@ shape = SubResource("RectangleShape2D_gcy3o")
 position = Vector2(1, -21)
 texture = ExtResource("2_fqf4h")
 
-[node name="interactableZone" parent="." instance=ExtResource("3_22ssc")]
-position = Vector2(1, 7)
-
 [node name="navigation_target" type="Node2D" parent="."]
 position = Vector2(0, 22)
 
@@ -30,4 +27,11 @@ position = Vector2(0, 22)
 radius = 1.0
 vertices = PackedVector2Array(25, -3, -25, -3, -30, 12, 30, 12)
 
-[connection signal="action_signal" from="interactableZone" to="." method="_on_interactable_zone_action_signal"]
+[node name="InteractableOfferingSlot" parent="." instance=ExtResource("3_u76y4")]
+position = Vector2(-24, 2)
+
+[node name="InteractableOfferingSlot2" parent="." instance=ExtResource("3_u76y4")]
+position = Vector2(0, 2)
+
+[node name="InteractableOfferingSlot3" parent="." instance=ExtResource("3_u76y4")]
+position = Vector2(25, 2)
