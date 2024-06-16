@@ -58,7 +58,7 @@ visible = false
 navigation_polygon = SubResource("NavigationPolygon_3hnsb")
 
 [node name="Shrine" parent="." instance=ExtResource("2_1onby")]
-position = Vector2(-74, -85)
+position = Vector2(-71, -73)
 
 [node name="ShrineOvergrown" parent="." instance=ExtResource("3_086x4")]
 position = Vector2(186, -62)
