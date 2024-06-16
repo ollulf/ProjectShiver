@@ -16,3 +16,4 @@ func _process(delta):
 func npc_pray():
 	var instance = preload("res://scenes/effects/offerEffect.tscn").instantiate()
 	add_child(instance)
+

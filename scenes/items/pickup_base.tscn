@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm1qafw6fbdw6"]
+
+[ext_resource type="Script" path="res://scenes/items/pickup.gd" id="1_gm8ky"]
+[ext_resource type="PackedScene" uid="uid://3ckopbhej41u" path="res://scenes/InteractableZone.tscn" id="3_8aya5"]
+
+[node name="pickup_base" type="Node2D"]
+script = ExtResource("1_gm8ky")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="interactableZone" parent="." instance=ExtResource("3_8aya5")]
