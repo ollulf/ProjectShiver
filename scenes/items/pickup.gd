@@ -11,7 +11,9 @@ func onInteract():
 		drop()
 	else:
 		pick_up(get_tree().get_first_node_in_group("player"))
-	
+
+func set_tex(val):
+	$Sprite2D.texture = val	
 
 func pick_up(target:Node2D):
 	if picked_up:
