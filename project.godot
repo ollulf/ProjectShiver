@@ -26,6 +26,7 @@ MusicPlayer="*res://scenes/music_player.tscn"
 
 [display]
 
+window/stretch/mode="canvas_items"
 window/stretch/scale=4.0
 
 [input]

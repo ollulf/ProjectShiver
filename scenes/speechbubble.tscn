@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxqb2e185nau"]
+[gd_scene load_steps=6 format=3 uid="uid://cxqb2e185nau"]
 
 [ext_resource type="Script" path="res://scripts/speech/speechbubble.gd" id="1_ql42f"]
 [ext_resource type="Texture2D" uid="uid://dawngd2o1kk2p" path="res://assets/Sprites/UI/Speechboubble.png" id="2_0c3v2"]
+[ext_resource type="FontFile" uid="uid://cpetscin3nqpy" path="res://assets/Sprites/UI/EXEPixelPerfect.ttf" id="3_rcysr"]
 [ext_resource type="Texture2D" uid="uid://d0u8efhoipwy5" path="res://assets/Sprites/UI/Speechboubble_triangle.png" id="4_xe6bp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g6w7q"]
@@ -23,6 +24,7 @@ script = ExtResource("1_ql42f")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rcysr")
 
 [node name="TextureRect" type="TextureRect" parent="Label"]
 modulate = Color(0, 0, 0, 1)
