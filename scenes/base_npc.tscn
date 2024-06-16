@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://civesr6iscj7c"]
+[gd_scene load_steps=5 format=3 uid="uid://civesr6iscj7c"]
 
 [ext_resource type="Script" path="res://scripts/base_npc.gd" id="1_4wd5l"]
 [ext_resource type="Texture2D" uid="uid://dhrnaprg44huh" path="res://assets/Sprites/Characters/Frog2_Body.png" id="2_ekedt"]
 [ext_resource type="Script" path="res://scripts/character_tween_animator.gd" id="3_jvs2y"]
-[ext_resource type="Texture2D" uid="uid://bo80vslvanv8c" path="res://assets/Sprites/Characters/Frog2_RightArm.png" id="4_8kpx5"]
-[ext_resource type="Texture2D" uid="uid://bmyk2a6un8gso" path="res://assets/Sprites/Characters/Frog2_LeftArm.png" id="5_5u3q6"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fver0"]
+load_path = "res://.godot/imported/Frog1_Arms.png-98d3093b8f1582b8936d18c63bc65b8b.ctex"
 
 [node name="Base_NPC" type="CharacterBody2D"]
 script = ExtResource("1_4wd5l")
@@ -18,13 +19,8 @@ offset = Vector2(2.08165e-12, -12)
 script = ExtResource("3_jvs2y")
 
 [node name="armL" type="Sprite2D" parent="Sprite"]
-position = Vector2(-3, -18)
-texture = ExtResource("5_5u3q6")
-offset = Vector2(3, 6)
-
-[node name="armR" type="Sprite2D" parent="Sprite"]
-position = Vector2(-3, -18)
-texture = ExtResource("4_8kpx5")
+position = Vector2(0, -18)
+texture = SubResource("CompressedTexture2D_fver0")
 offset = Vector2(3, 6)
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
