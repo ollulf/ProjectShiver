@@ -23,6 +23,7 @@ VfxHandler="*res://scripts/vfx/vfx_handler.gd"
 SpeechbubbleManger="*res://scripts/speech/speechbubble_manger.tscn"
 NpcHandler="*res://scenes/npc_handler.tscn"
 MusicPlayer="*res://scenes/music_player.tscn"
+SpiritHandler="*res://scripts/spirit_handler.gd"
 
 [display]
 
