@@ -10,7 +10,9 @@ var labelOriginPosition
 var tweenIn
 var tweenOut
 
-signal action_signal()
+var disabled := false
+
+signal on_interact
 
 @onready var label = $Label
 
@@ -18,9 +20,21 @@ func _ready():
 	labelOriginPosition = label.position
 	label.modulate.a = 0
 
+func set_disabled(value):
+	disabled = value
+	if value:
+		Player.get_instance().change_interactable(self, false)
+		if tweenIn:
+			tweenIn.kill()
+		$Label.modulate.a = 0
+	pass
+
 func _on_body_entered(body):
+	if disabled:
+		return
+	
 	if body is Player:
-		(body as Player).change_interactable(self)
+		body.change_interactable(self, true)
 		isInteractable = 1
 		
 		tweenIn = label.create_tween()
@@ -30,15 +44,18 @@ func _on_body_entered(body):
 		label.show()
 
 func _on_body_exited(body):
+	if disabled:
+		return
+	
 	if body is Player:
-		(body as Player).change_interactable(null)
+		body.change_interactable(self, false)
 		isInteractable = 0
 
 		tweenOut = label.create_tween()
 		tweenOut.set_parallel()
 		tweenOut.tween_property(label, "modulate:a", 0, FADE_TIME)
 		tweenOut.tween_property(label, "position", Vector2(labelOriginPosition.x, labelOriginPosition.y), FADE_TIME)
+			
 		
-func _fireAction():
-	print("emit signal!")
-	action_signal.emit()
+func fireAction():
+	on_interact.emit()
