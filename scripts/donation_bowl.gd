@@ -1,4 +1,5 @@
 extends Sprite2D
+class_name DonationBowl
 
 var emptyBowl = load("res://assets/Sprites/Manmade/donationBowl-empty.png")
 var bowl_full_1 = load("res://assets/Sprites/Manmade/donationBowl-full-1.png")
@@ -7,10 +8,15 @@ var bowl_full_3 = load("res://assets/Sprites/Manmade/donationBowl-full-3.png")
 var donationLimit = 30
 var currentMoney = 0
 
+static var Bowls = []
+
+@onready var navigation_target = $navigation_target
+
 func _ready():
-	_changeMoney(0)
+	add_money(0)
+	Bowls.append(self)
 	
-func _changeMoney(amount):
+func add_money(amount):
 	currentMoney += amount
 	
 	if currentMoney > donationLimit:
@@ -25,12 +31,11 @@ func _changeMoney(amount):
 	else:
 		texture = bowl_full_3
 		
-		
 func _on_interactable_zone_action_signal():
 
 	if currentMoney > 0:
-		MoneyHandler.UpdateMoney(currentMoney)
-		_changeMoney(-currentMoney)
+		MoneyHandler.UpdateMoney(MoneyHandler.currentPlayerMoney + currentMoney)
+		add_money(-currentMoney)
 		print("retract", currentMoney)
 		
 	else:

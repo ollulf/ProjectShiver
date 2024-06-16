@@ -10,3 +10,7 @@ func process(context):
 		print("destroyed npc")
 	
 	return false
+	
+	
+func get_name():
+	return "leave task"

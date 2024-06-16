@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/misc/Shrine.gd" id="1_brlrd"]
 [ext_resource type="Texture2D" uid="uid://bh65denxum1bq" path="res://assets/Sprites/Manmade/shrine.png" id="2_fqf4h"]
-[ext_resource type="PackedScene" uid="uid://3ckopbhej41u" path="res://scenes/InteractableZone.tscn" id="3_22ssc"]
+[ext_resource type="PackedScene" uid="uid://bdjsd2ljlp6fh" path="res://scenes/InteractableZone.tscn" id="3_22ssc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gcy3o"]
 size = Vector2(62, 14)
@@ -22,5 +22,12 @@ texture = ExtResource("2_fqf4h")
 
 [node name="interactableZone" parent="." instance=ExtResource("3_22ssc")]
 position = Vector2(1, 7)
+
+[node name="navigation_target" type="Node2D" parent="."]
+position = Vector2(0, 22)
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
+radius = 1.0
+vertices = PackedVector2Array(25, -3, -25, -3, -30, 12, 30, 12)
 
 [connection signal="action_signal" from="interactableZone" to="." method="_on_interactable_zone_action_signal"]

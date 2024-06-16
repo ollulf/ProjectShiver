@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=3 uid="uid://dx02uaybssvnd"]
+[gd_scene load_steps=5 format=3 uid="uid://cxqb2e185nau"]
 
-[ext_resource type="Theme" uid="uid://dnhiup3pymhfa" path="res://assets/Sprites/UI/theme.tres" id="1_p0kbr"]
 [ext_resource type="Script" path="res://scripts/speech/speechbubble.gd" id="1_ql42f"]
 [ext_resource type="Texture2D" uid="uid://dawngd2o1kk2p" path="res://assets/Sprites/UI/Speechboubble.png" id="2_0c3v2"]
 [ext_resource type="Texture2D" uid="uid://d0u8efhoipwy5" path="res://assets/Sprites/UI/Speechboubble_triangle.png" id="4_xe6bp"]
@@ -16,7 +15,9 @@ axis_stretch_vertical = 1
 modulate_color = Color(0, 0, 0, 1)
 
 [node name="Speechbubble" type="PanelContainer"]
-theme = ExtResource("1_p0kbr")
+offset_right = 21.0
+offset_bottom = 47.0
+scale = Vector2(0.5, 0.5)
 theme_override_styles/panel = SubResource("StyleBoxTexture_g6w7q")
 script = ExtResource("1_ql42f")
 
