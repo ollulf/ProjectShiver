@@ -14,12 +14,14 @@ static var instance
 func _init():
 	instance = self
 
+func _ready():
+	$sprite/carry.visible = false
+
 func _exit_tree():
 	instance = null
 
 func _physics_process(delta):
 	player_movement(delta)
-	
 	
 func player_movement(delta):
 	var input = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -59,6 +61,11 @@ func change_pickup(target, active:bool):
 		currentPickup = target
 	elif currentPickup == target:
 		currentPickup = null
+		
+	$sprite/carry.visible = currentPickup != null
+
+func get_pickup_parent():
+	return $sprite
 
 static func get_instance():
 	return instance
