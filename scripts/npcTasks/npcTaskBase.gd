@@ -11,7 +11,7 @@ func _init(x, y):
 func process(context):
 	if startTime == null:
 		startTime = Time.get_ticks_msec()
-	elif startTime + 10000.0 < Time.get_ticks_msec():
+	elif startTime + 3000.0 < Time.get_ticks_msec():
 		return true
 	
 	return false

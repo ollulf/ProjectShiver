@@ -61,14 +61,13 @@ func _process(delta):
 		elif rng.randf() > 0.5:
 			taskQueue.append(prayTask.new())
 		else:
-			taskQueue.append(npcTaskBase.new(-7,-7))
+			taskQueue.append(waitTask.new(-7,-7))
 		
 	force_task(taskQueue.pop_front())
 	
 func force_task(task):
-	#print("force task: " + str(task))
 	activeTask = task
-	SpeechbubbleManger.say(self, task.get_name())
+	#SpeechbubbleManger.say(self, task.get_name())
 	
 class TaskContext:
 	@export var Delta : float

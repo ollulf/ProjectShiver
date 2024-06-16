@@ -1,34 +1,34 @@
 [gd_scene load_steps=31 format=3 uid="uid://c6itcxf6w4oee"]
 
 [ext_resource type="Texture2D" uid="uid://bklwtgcsvf4se" path="res://assets/ground.png" id="1_0flp6"]
-[ext_resource type="PackedScene" uid="uid://me8302f5bq7c" path="res://scenes/environment/manmade/shrine.tscn" id="2_1onby"]
-[ext_resource type="PackedScene" uid="uid://dswhw36mi1b8e" path="res://scenes/environment/Plants/plant_2.tscn" id="3_n4gi2"]
-[ext_resource type="PackedScene" uid="uid://jolnrlr2w7pb" path="res://scenes/environment/Plants/plant_1.tscn" id="4_m8ofo"]
-[ext_resource type="PackedScene" uid="uid://dkxskf01k5u3n" path="res://scenes/environment/Plants/plant_4.tscn" id="5_tie3u"]
-[ext_resource type="PackedScene" uid="uid://dfqnlsa3t1aun" path="res://scenes/environment/Plants/plant_5.tscn" id="6_hhqx0"]
-[ext_resource type="PackedScene" uid="uid://daewhsw15w5p0" path="res://scenes/environment/Plants/plant_6.tscn" id="7_psxg0"]
+[ext_resource type="PackedScene" uid="uid://me8302f5bq7c" path="res://scenes/Environment/manmade/shrine.tscn" id="2_1onby"]
+[ext_resource type="PackedScene" uid="uid://dswhw36mi1b8e" path="res://scenes/Environment/Plants/plant_2.tscn" id="3_n4gi2"]
+[ext_resource type="PackedScene" uid="uid://jolnrlr2w7pb" path="res://scenes/Environment/Plants/plant_1.tscn" id="4_m8ofo"]
+[ext_resource type="PackedScene" uid="uid://dkxskf01k5u3n" path="res://scenes/Environment/Plants/plant_4.tscn" id="5_tie3u"]
+[ext_resource type="PackedScene" uid="uid://dfqnlsa3t1aun" path="res://scenes/Environment/Plants/plant_5.tscn" id="6_hhqx0"]
+[ext_resource type="PackedScene" uid="uid://daewhsw15w5p0" path="res://scenes/Environment/Plants/plant_6.tscn" id="7_psxg0"]
 [ext_resource type="PackedScene" uid="uid://d1ukokw2wpy6h" path="res://scenes/donation_bowl.tscn" id="8_ra3s8"]
 [ext_resource type="PackedScene" uid="uid://wdtx2rop3ead" path="res://scenes/sun_clock.tscn" id="9_wjoq0"]
-[ext_resource type="PackedScene" uid="uid://djslfe1cxnenq" path="res://scenes/environment/Plants/tree_1.tscn" id="10_u0n0g"]
-[ext_resource type="PackedScene" uid="uid://3pbbb7fqki55" path="res://scenes/environment/Plants/tree_2.tscn" id="11_fmgla"]
-[ext_resource type="PackedScene" uid="uid://dvnsx1nty2dff" path="res://scenes/environment/Plants/tree_3.tscn" id="12_d7ttf"]
-[ext_resource type="PackedScene" uid="uid://dfr0xovxspy11" path="res://scenes/environment/Rocks/BigRock_1.tscn" id="14_0v4m8"]
-[ext_resource type="PackedScene" uid="uid://cqdi7a2581bko" path="res://scenes/environment/Rocks/BigRock_2.tscn" id="15_81d2h"]
-[ext_resource type="PackedScene" uid="uid://c5d2hhj6bnx80" path="res://scenes/environment/Rocks/FloorRocks_1.tscn" id="16_rnq42"]
-[ext_resource type="PackedScene" uid="uid://tyk5y5ilyc2c" path="res://scenes/environment/Rocks/FloorRocks_2.tscn" id="17_k67ol"]
-[ext_resource type="PackedScene" uid="uid://bc6eb2fjtr3l2" path="res://scenes/environment/Rocks/FloorRocks_3.tscn" id="18_jp3e5"]
-[ext_resource type="PackedScene" uid="uid://bmciskg0u5wkc" path="res://scenes/environment/Rocks/FloorRocks_4.tscn" id="19_b4nyu"]
-[ext_resource type="PackedScene" uid="uid://dilh1m6dst11j" path="res://scenes/environment/Rocks/Rock_1.tscn" id="20_tjb13"]
-[ext_resource type="PackedScene" uid="uid://bcrnq3sq2e4nb" path="res://scenes/environment/Rocks/Rock_2.tscn" id="21_gn6x4"]
-[ext_resource type="PackedScene" uid="uid://b7kpbhwulvsvg" path="res://scenes/environment/Rocks/FloorRocks_6.tscn" id="22_lrhsj"]
-[ext_resource type="PackedScene" uid="uid://b6r2pfuvi0l8" path="res://scenes/environment/Rocks/FloorRocks_7.tscn" id="23_2dunq"]
-[ext_resource type="PackedScene" uid="uid://bkophbq71fuxo" path="res://scenes/environment/Rocks/FloorRocks_8.tscn" id="24_2xast"]
-[ext_resource type="PackedScene" uid="uid://ckba1b7e6k1om" path="res://scenes/environment/Rocks/FloorRocks_5.tscn" id="25_jtq77"]
-[ext_resource type="PackedScene" uid="uid://s6tb73a6ul54" path="res://scenes/lamp.tscn" id="26_m0qi5"]
-[ext_resource type="PackedScene" uid="uid://0natq0y4dseb" path="res://scenes/environment/Plants/plant_3.tscn" id="26_xrlrc"]
-[ext_resource type="PackedScene" uid="uid://bqowge4k8l3a8" path="res://scenes/environment/manmade/EntranceRock_1.tscn" id="27_5myjv"]
-[ext_resource type="PackedScene" uid="uid://buusk6br2fcul" path="res://scenes/environment/manmade/EntranceRock_2.tscn" id="28_5apn8"]
-[ext_resource type="PackedScene" uid="uid://xalkknyn38ck" path="res://scenes/environment/Rocks/RockWall_1.tscn" id="29_o1nat"]
+[ext_resource type="PackedScene" uid="uid://djslfe1cxnenq" path="res://scenes/Environment/Plants/tree_1.tscn" id="10_u0n0g"]
+[ext_resource type="PackedScene" uid="uid://3pbbb7fqki55" path="res://scenes/Environment/Plants/tree_2.tscn" id="11_fmgla"]
+[ext_resource type="PackedScene" uid="uid://dvnsx1nty2dff" path="res://scenes/Environment/Plants/tree_3.tscn" id="12_d7ttf"]
+[ext_resource type="PackedScene" uid="uid://dfr0xovxspy11" path="res://scenes/Environment/Rocks/BigRock_1.tscn" id="14_0v4m8"]
+[ext_resource type="PackedScene" uid="uid://cqdi7a2581bko" path="res://scenes/Environment/Rocks/BigRock_2.tscn" id="15_81d2h"]
+[ext_resource type="PackedScene" uid="uid://c5d2hhj6bnx80" path="res://scenes/Environment/Rocks/FloorRocks_1.tscn" id="16_rnq42"]
+[ext_resource type="PackedScene" uid="uid://tyk5y5ilyc2c" path="res://scenes/Environment/Rocks/FloorRocks_2.tscn" id="17_k67ol"]
+[ext_resource type="PackedScene" uid="uid://bc6eb2fjtr3l2" path="res://scenes/Environment/Rocks/FloorRocks_3.tscn" id="18_jp3e5"]
+[ext_resource type="PackedScene" uid="uid://bmciskg0u5wkc" path="res://scenes/Environment/Rocks/FloorRocks_4.tscn" id="19_b4nyu"]
+[ext_resource type="PackedScene" uid="uid://dilh1m6dst11j" path="res://scenes/Environment/Rocks/Rock_1.tscn" id="20_tjb13"]
+[ext_resource type="PackedScene" uid="uid://bcrnq3sq2e4nb" path="res://scenes/Environment/Rocks/Rock_2.tscn" id="21_gn6x4"]
+[ext_resource type="PackedScene" uid="uid://b7kpbhwulvsvg" path="res://scenes/Environment/Rocks/FloorRocks_6.tscn" id="22_lrhsj"]
+[ext_resource type="PackedScene" uid="uid://b6r2pfuvi0l8" path="res://scenes/Environment/Rocks/FloorRocks_7.tscn" id="23_2dunq"]
+[ext_resource type="PackedScene" uid="uid://bkophbq71fuxo" path="res://scenes/Environment/Rocks/FloorRocks_8.tscn" id="24_2xast"]
+[ext_resource type="PackedScene" uid="uid://ckba1b7e6k1om" path="res://scenes/Environment/Rocks/FloorRocks_5.tscn" id="25_jtq77"]
+[ext_resource type="PackedScene" path="res://scenes/lamp.tscn" id="26_m0qi5"]
+[ext_resource type="PackedScene" uid="uid://0natq0y4dseb" path="res://scenes/Environment/Plants/plant_3.tscn" id="26_xrlrc"]
+[ext_resource type="PackedScene" uid="uid://bqowge4k8l3a8" path="res://scenes/Environment/manmade/EntranceRock_1.tscn" id="27_5myjv"]
+[ext_resource type="PackedScene" uid="uid://buusk6br2fcul" path="res://scenes/Environment/manmade/EntranceRock_2.tscn" id="28_5apn8"]
+[ext_resource type="PackedScene" path="res://scenes/environment/Rocks/RockWall_1.tscn" id="29_o1nat"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_3hnsb"]
 vertices = PackedVector2Array(-204, -45, -175, -63, -147, 6, -153, 33, -186, 1, -210, -35, -26, -138, -3, -135, -15, -103, -40, -97, -144, -165, -117, -166, -122, -115, -143, -83, -111, -100, 8, 97, 8, 103, -22, 108, 66, 52, 78, 65, 78, 76, 64, 80, 51, 75, 38, 68, 48, 41, 1, -80, -55, -87, -87, -81, -75, -17, -112, -19, 137, 27, 111, 55, 85, 51, 81, 37, 118, -36, 94, -49, 63, 27, 68, -45, 48, -52, 52, 31, 66, 51, -211, -18, -60, 13, -66, -80, 34, -61, 23, 72, -70, 49, 11, 88, -51, 100, -74, 73, 12, -72, 26, -75, 32, -71)
@@ -46,16 +46,16 @@ scale = Vector2(1000, 1000)
 texture = ExtResource("1_0flp6")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-visible = false
 navigation_polygon = SubResource("NavigationPolygon_3hnsb")
 
 [node name="Shrine" parent="." instance=ExtResource("2_1onby")]
 position = Vector2(-74, -85)
 
 [node name="SunClock" parent="." instance=ExtResource("9_wjoq0")]
+position = Vector2(85, 62)
 
 [node name="DonationBowl" parent="." instance=ExtResource("8_ra3s8")]
-position = Vector2(139, 1)
+position = Vector2(95, -20)
 
 [node name="Trees" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -879,7 +879,7 @@ position = Vector2(-60, -19)
 y_sort_enabled = true
 
 [node name="BigRock" parent="Rocks" instance=ExtResource("14_0v4m8")]
-position = Vector2(103, -69)
+position = Vector2(107, -60)
 
 [node name="BigRock2" parent="Rocks" instance=ExtResource("14_0v4m8")]
 position = Vector2(-9, -141)
@@ -1032,7 +1032,7 @@ position = Vector2(23, -66)
 position = Vector2(-206, -29)
 
 [node name="Lamp3" parent="." instance=ExtResource("26_m0qi5")]
-position = Vector2(22, 10)
+position = Vector2(136, -20)
 
 [node name="RockWalls" type="Node2D" parent="."]
 y_sort_enabled = true
