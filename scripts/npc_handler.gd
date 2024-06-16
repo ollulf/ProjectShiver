@@ -19,7 +19,7 @@ func _process(delta):
 		var newNPC = BASE_NPC.instantiate()
 		newNPC.global_position = npcSpawnPosition
 		npcs.append(newNPC)
-		add_child(newNPC)
+		get_tree().get_first_node_in_group("level").add_child(newNPC)
 	elif (npcCurrentCount > npcTargetCount):
 		npcs.pop_front().force_task(leaveTask.new(npcSpawnPosition.x, npcSpawnPosition.y))
 	
