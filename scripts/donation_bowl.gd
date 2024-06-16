@@ -31,17 +31,9 @@ func add_money(amount):
 	else:
 		texture = bowl_full_3
 		
-func _on_interactable_zone_action_signal():
+func _on_interactable_zone_on_interact():
 
 	if currentMoney > 0:
 		MoneyHandler.UpdateMoney(MoneyHandler.currentPlayerMoney + currentMoney)
 		add_money(-currentMoney)
-		print("retract", currentMoney)
-		
-	else:
-		pass
-		#tweenOut = label.create_tween()
-		#tweenOut.set_parallel()
-		#tweenOut.tween_property(label, "modulate:a", 0, FADE_TIME)
-		#tweenOut.tween_property(label, "position", Vector2(labelOriginPosition.x, labelOriginPosition.y), FADE_TIME)
 
