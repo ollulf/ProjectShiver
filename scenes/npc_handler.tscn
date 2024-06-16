@@ -4,10 +4,10 @@
 
 [sub_resource type="Curve" id="Curve_eg6vk"]
 max_value = 8.0
-_data = [Vector2(0.236842, 0), -4.41618, -4.41618, 0, 0, Vector2(0.497807, 8), 0.0, 0.0, 0, 0, Vector2(0.763158, 0), 0.0, 0.0, 0, 0]
-point_count = 3
+_data = [Vector2(0.236842, 0), -4.41618, -4.41618, 0, 0, Vector2(0.302632, 6.99591), 0.0, 0.0, 0, 0, Vector2(0.508772, 6.01114), 0.0, 0.0, 0, 0, Vector2(0.600877, 8), 0.0, 0.0, 0, 0, Vector2(0.949561, 0), 0.0, 0.0, 0, 0]
+point_count = 5
 
 [node name="NPCHandler" type="Node2D"]
 script = ExtResource("1_vt1f1")
-npcSpawnPosition = Vector2(100, 100)
+npcSpawnPosition = Vector2(200, 160)
 npcTargetCountOverTimeOfDay = SubResource("Curve_eg6vk")

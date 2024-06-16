@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/day_night_handler.gd" id="1_urany"]
 
 [sub_resource type="Curve" id="Curve_eg6vk"]
-_data = [Vector2(0.039267, 1), 0.0, 0.0, 0, 0, Vector2(0.138743, 0.442197), -4.41618, -4.41618, 0, 0, Vector2(0.298429, 0), 0.0, 0.0, 0, 0, Vector2(0.730366, 0.0115607), 0.0, 0.0, 0, 0, Vector2(0.835079, 0.476879), 4.84082, 4.84082, 0, 0, Vector2(0.971204, 0.99711), 0.0, 0.0, 0, 0]
+_data = [Vector2(0.232456, 1), 0.0, 0.0, 0, 0, Vector2(0.269737, 0.425548), -4.41618, -4.41618, 0, 0, Vector2(0.506579, 0), 0.0, 0.0, 0, 0, Vector2(0.682018, 0), 0.0, 0.0, 0, 0, Vector2(0.835079, 0.476879), 4.84082, 4.84082, 0, 0, Vector2(0.971204, 0.99711), 0.0, 0.0, 0, 0]
 point_count = 6
 
 [node name="day_night_handler" type="DirectionalLight2D"]
