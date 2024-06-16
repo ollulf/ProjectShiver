@@ -51,3 +51,4 @@ frame_progress = 0.794172
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_kioon")
+bus = &"SFX"

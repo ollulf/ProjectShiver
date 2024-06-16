@@ -80,3 +80,4 @@ frame_progress = 1.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_hvwid")
+bus = &"SFX"
