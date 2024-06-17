@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://bp3m23aoubgtp" path="res://assets/audio/music/night-placeholder.mp3" id="2_lhyxg"]
 
 [node name="Node" type="Node"]
+process_mode = 3
 
 [node name="DayMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_l1hq0")

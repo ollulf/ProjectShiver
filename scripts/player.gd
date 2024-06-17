@@ -14,6 +14,7 @@ static var instance
 
 @onready var sprite = $sprite
 @onready var audio_stream_player = $AudioStreamPlayer
+@onready var preferences_panel = $PreferencesPanel
 
 func _init():
 	instance = self
@@ -34,6 +35,11 @@ func player_movement(delta):
 	
 	var target_velocity = Vector2(0,0)
 	
+	if Input.is_action_just_pressed("pause"):
+		if !get_tree().paused:
+			get_tree().paused = true
+			preferences_panel.show()
+				
 	if Input.is_action_just_pressed("ui_accept"):
 		perform_action()
 		
