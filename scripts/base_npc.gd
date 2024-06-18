@@ -4,7 +4,7 @@ class_name NPC
 @onready var navigation = $NavigationAgent2D
 @onready var sprite = $Sprite
 
-const SPEED = 30.0
+const SPEED = 25.0
 const ACCELLERATION = 7.0
 
 var taskQueue = []

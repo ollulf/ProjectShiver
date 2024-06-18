@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://chm1g3jhhgsqw"]
+
+[ext_resource type="Script" path="res://scripts/misc/Shrine.gd" id="1_lpqhh"]
+[ext_resource type="Texture2D" uid="uid://3h8swvm8qpb5" path="res://assets/Sprites/Manmade/smallShrine.png" id="2_1pwxe"]
+[ext_resource type="PackedScene" uid="uid://brjpimkuew52i" path="res://scenes/interactable_offering_slot.tscn" id="3_6kfn0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gcy3o"]
+size = Vector2(24, 21)
+
+[node name="Shrine" type="StaticBody2D"]
+texture_filter = 1
+position = Vector2(0, -1)
+script = ExtResource("1_lpqhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -11.5)
+shape = SubResource("RectangleShape2D_gcy3o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
+texture = ExtResource("2_1pwxe")
+offset = Vector2(0, -14)
+
+[node name="navigation_target" type="Node2D" parent="."]
+position = Vector2(0, 13)
+
+[node name="InteractableOfferingSlot" parent="." instance=ExtResource("3_6kfn0")]
+position = Vector2(0, -19)

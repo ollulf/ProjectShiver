@@ -13,11 +13,13 @@ static var Bowls = []
 @onready var navigation_target = $navigation_target
 
 func _ready():
-	add_money(0)
+	#add_money(0)
 	Bowls.append(self)
 	
 func add_money(amount):
 	currentMoney += amount
+	
+	$AudioStreamPlayer.play()
 	
 	if currentMoney > donationLimit:
 		currentMoney = donationLimit
@@ -32,9 +34,8 @@ func add_money(amount):
 		texture = bowl_full_3
 		
 func _on_interactable_zone_on_interact():
-	print("Fired interaction bowl signal")
 	if currentMoney > 0:
-		print("Updated Money")
+		$AudioStreamPlayer.play()
 		MoneyHandler.UpdateMoney(MoneyHandler.currentPlayerMoney + currentMoney)
 		add_money(-currentMoney)
 

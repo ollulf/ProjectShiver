@@ -1,17 +1,21 @@
-[gd_scene load_steps=34 format=3 uid="uid://c6itcxf6w4oee"]
+[gd_scene load_steps=38 format=3 uid="uid://c6itcxf6w4oee"]
 
 [ext_resource type="Texture2D" uid="uid://bklwtgcsvf4se" path="res://assets/ground.png" id="1_0flp6"]
-[ext_resource type="PackedScene" uid="uid://me8302f5bq7c" path="res://scenes/environment/manmade/shrine.tscn" id="2_1onby"]
+[ext_resource type="PackedScene" uid="uid://chm1g3jhhgsqw" path="res://scenes/environment/manmade/smallShrine.tscn" id="2_e6y1j"]
 [ext_resource type="PackedScene" uid="uid://cgj40hrkqq7my" path="res://scenes/environment/manmade/shrineOvergrown.tscn" id="3_086x4"]
 [ext_resource type="PackedScene" uid="uid://dswhw36mi1b8e" path="res://scenes/environment/Plants/plant_2.tscn" id="3_n4gi2"]
 [ext_resource type="PackedScene" uid="uid://jolnrlr2w7pb" path="res://scenes/environment/Plants/plant_1.tscn" id="4_m8ofo"]
+[ext_resource type="PackedScene" uid="uid://ppwjg0wwlnp2" path="res://scenes/environment/manmade/smallShrineOvergrown.tscn" id="5_fujlx"]
 [ext_resource type="PackedScene" uid="uid://dkxskf01k5u3n" path="res://scenes/environment/Plants/plant_4.tscn" id="5_tie3u"]
 [ext_resource type="PackedScene" uid="uid://dfqnlsa3t1aun" path="res://scenes/environment/Plants/plant_5.tscn" id="6_hhqx0"]
 [ext_resource type="PackedScene" uid="uid://daewhsw15w5p0" path="res://scenes/environment/Plants/plant_6.tscn" id="7_psxg0"]
 [ext_resource type="PackedScene" uid="uid://d1ukokw2wpy6h" path="res://scenes/donation_bowl.tscn" id="8_ra3s8"]
+[ext_resource type="PackedScene" uid="uid://bpvv6xfb8ul3y" path="res://scenes/interactables/driedPlant_2.tscn" id="9_pd4p5"]
 [ext_resource type="PackedScene" uid="uid://wdtx2rop3ead" path="res://scenes/sun_clock.tscn" id="9_wjoq0"]
+[ext_resource type="PackedScene" uid="uid://of344et7pnyu" path="res://scenes/interactables/driedPlant_3.tscn" id="10_ddy11"]
 [ext_resource type="PackedScene" uid="uid://djslfe1cxnenq" path="res://scenes/environment/Plants/tree_1.tscn" id="10_u0n0g"]
 [ext_resource type="PackedScene" uid="uid://3pbbb7fqki55" path="res://scenes/environment/Plants/tree_2.tscn" id="11_fmgla"]
+[ext_resource type="PackedScene" uid="uid://c1o5etxxotaxo" path="res://scenes/interactables/driedPlant_4.tscn" id="11_v2cep"]
 [ext_resource type="PackedScene" uid="uid://dvnsx1nty2dff" path="res://scenes/environment/Plants/tree_3.tscn" id="12_d7ttf"]
 [ext_resource type="PackedScene" uid="uid://dfr0xovxspy11" path="res://scenes/environment/Rocks/BigRock_1.tscn" id="14_0v4m8"]
 [ext_resource type="PackedScene" uid="uid://cqdi7a2581bko" path="res://scenes/environment/Rocks/BigRock_2.tscn" id="15_81d2h"]
@@ -34,9 +38,9 @@
 [ext_resource type="PackedScene" uid="uid://byup8edav7tbp" path="res://scenes/environment/manmade/theHole.tscn" id="32_134x3"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_3hnsb"]
-vertices = PackedVector2Array(169, -94, 168, -94, 195, -101, 209, 130, 245, 161, 191, 183, 149, 156, 148, 85, 267, -71, 285, -36, 297, 14, 196, 1, 195, -14, 230, -61, -55, 17, 164, 7, 292, 32, 64, 24, -140, -136, -116, -141, -118, -114, -141, -78, -111, -101, -111, -100, 208, 88, 171, 80, -26, -138, -3, -135, -15, -103, -40, -98, -220, 68, -186, -35, -162, -59, -104, -88, -107, -69, -145, 10, -180, 44, 219, -68, 169, -19, 262, 36, 260, 68, 170, 66, 102, 62, 97, 46, 27, 82, -159, 96, -220, 94, -88, 74, 119, 87, 117, 108, 83, 107, 80, 90, 12, 103, 38, 120, 33, 129, -2, 133, -72, 121, -115, 121, -157, 119, 60, 77, 82, 65, -264, 41, -307, 44, -322, -6, -297, -51, -252, -38, -214, -27, -7, 151, -63, 151, 146, -62, 208, -90, 145, -4, 131, -64, 95, -50, -45, -88, 1, -80, -41, -70, 68, -45, 12, -72, 26, -75, 32, -71, 34, -61, 48, -52, -97, -9, -162, 66, -121, 61, 216, 72, 65, 61, 53, 46, 51, 34, -66, 52)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11, 12, 13), PackedInt32Array(14, 15, 10, 16, 17), PackedInt32Array(18, 19, 20, 21), PackedInt32Array(21, 20, 22, 23), PackedInt32Array(24, 3, 7, 25), PackedInt32Array(26, 27, 28, 29), PackedInt32Array(30, 31, 32, 21, 23, 33, 34, 35, 36), PackedInt32Array(37, 13, 12, 38), PackedInt32Array(39, 40, 41, 42, 43), PackedInt32Array(44, 45, 46, 30, 47), PackedInt32Array(48, 49, 50, 51), PackedInt32Array(52, 53, 54, 55, 56), PackedInt32Array(56, 57, 58, 45, 44, 52), PackedInt32Array(42, 41, 25, 7, 48, 59, 60), PackedInt32Array(61, 62, 63, 64, 65, 66), PackedInt32Array(30, 61, 66, 31), PackedInt32Array(55, 67, 68, 56), PackedInt32Array(69, 0, 2, 70, 37, 38, 71), PackedInt32Array(72, 69, 71, 73), PackedInt32Array(74, 29, 28, 75, 76), PackedInt32Array(77, 73, 71, 14), PackedInt32Array(76, 75, 78), PackedInt32Array(78, 79, 80, 81), PackedInt32Array(48, 51, 59), PackedInt32Array(39, 43, 17, 16), PackedInt32Array(76, 78, 81, 82, 14, 83), PackedInt32Array(84, 85, 47), PackedInt32Array(15, 11, 10), PackedInt32Array(71, 15, 14), PackedInt32Array(82, 77, 14), PackedInt32Array(34, 76, 83, 35), PackedInt32Array(30, 36, 84), PackedInt32Array(40, 86, 41), PackedInt32Array(87, 60, 59, 44), PackedInt32Array(88, 87, 44), PackedInt32Array(14, 89, 88, 44, 90), PackedInt32Array(14, 17, 89), PackedInt32Array(47, 90, 44), PackedInt32Array(30, 84, 47)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-187, -36, -163, -60, -142, -78, -141, -137, -115, -143, -117, -114, -110, -101, -103, -89, -106, -70, -42, -71, -46, -88, -41, -98, -27, -140, -2, -136, -14, -103, 2, -81, 12, -73, 26, -76, 33, -72, 35, -62, 48, -53, 68, -46, 95, -51, 131, -65, 146, -63, 168, -95, 196, -103, 209, -91, 220, -69, 230, -62, 267, -72, 286, -36, 298, 14, 293, 33, 263, 37, 261, 69, 216, 73, 171, 67, 172, 79, 209, 88, 210, 130, 248, 162, 191, 185, 148, 157, 147, 86, 120, 88, 118, 110, 83, 108, 79, 91, 60, 78, 28, 83, 13, 103, 39, 119, 34, 130, -1, 134, -7, 153, -64, 152, -73, 122, -115, 122, -158, 120, -160, 97, -221, 95, -221, 69, -264, 42, -308, 46, -323, -6, -297, -52, -252, -39, -214, -28), PackedVector2Array(-67, 51, -56, 17, -97, -8, -144, 11, -179, 44, -162, 65, -121, 60, -88, 73), PackedVector2Array(82, 64, 101, 61, 96, 47, 64, 25, 52, 34, 54, 46, 66, 60), PackedVector2Array(147, -4, 164, 6, 195, 0, 194, -13, 169, -18)])
+vertices = PackedVector2Array(-44, -126, 2, -126, -15, -103, -46, -101, 209, 130, 245, 161, 191, 183, 149, 156, 148, 85, -140, -136, -116, -141, -118, -114, -141, -78, -111, -101, -111, -100, -2, 133, -10, 148, -48, 143, -66, 122, -42, 111, -23, 108, 12, 103, 208, 88, 171, 80, 230, -61, 266, -70, 268, -47, 251, -31, 195, -14, -104, -88, -162, 66, -159, 96, -220, 94, -220, 68, -180, 44, 119, 87, 117, 108, 83, 107, 80, 90, 38, 120, 33, 129, -17, 92, 27, 82, 265, 24, 196, 1, 261, 2, 271, 9, -88, 74, -87, 100, -115, 120, -157, 119, -121, 61, 102, 62, 170, 66, 60, 77, 82, 65, 267, -21, 274, -11, 221, -63, 207, -62, 193, -62, 169, -19, 170, -60, 146, -62, 145, -4, 131, -64, 95, -50, -264, 41, -307, 44, -322, -5, -291, -43, -249, -42, -214, -27, -186, -35, -145, 10, 253, 40, 246, 65, 194, 64, 97, 46, -162, -59, -99, -80, -97, -9, -59, -89, 1, -80, -68, -79, 68, -45, -55, 17, 64, 24, 12, -72, 26, -75, 32, -71, 34, -61, 164, 7, 51, 34, -66, 52, 53, 46, 65, 61, -43, 82, 216, 72, -61, 87, 48, -52)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8), PackedInt32Array(9, 10, 11, 12), PackedInt32Array(12, 11, 13, 14), PackedInt32Array(15, 16, 17, 18, 19, 20, 21), PackedInt32Array(22, 4, 8, 23), PackedInt32Array(24, 25, 26, 27, 28), PackedInt32Array(12, 14, 29), PackedInt32Array(30, 31, 32, 33, 34), PackedInt32Array(35, 36, 37, 38), PackedInt32Array(21, 39, 40, 15), PackedInt32Array(21, 20, 41, 42), PackedInt32Array(43, 44, 28, 45, 46), PackedInt32Array(47, 48, 49, 50, 31, 51), PackedInt32Array(52, 53, 23, 8, 35, 54, 55), PackedInt32Array(56, 57, 45, 28, 27), PackedInt32Array(58, 24, 28, 59), PackedInt32Array(60, 59, 28, 61, 62), PackedInt32Array(63, 62, 61, 64), PackedInt32Array(65, 63, 64, 66), PackedInt32Array(67, 68, 69, 70, 71, 72), PackedInt32Array(34, 33, 67, 72, 73, 74), PackedInt32Array(75, 76, 77, 52, 78), PackedInt32Array(79, 12, 29, 80, 81, 74, 73), PackedInt32Array(82, 3, 2, 83, 84), PackedInt32Array(85, 66, 64, 86), PackedInt32Array(43, 75, 78, 87), PackedInt32Array(88, 89, 90, 91, 86), PackedInt32Array(43, 87, 86, 92), PackedInt32Array(86, 87, 93, 94), PackedInt32Array(94, 93, 95), PackedInt32Array(47, 94, 95, 96, 54, 42, 97), PackedInt32Array(35, 38, 54), PackedInt32Array(84, 83, 88, 86, 81), PackedInt32Array(42, 41, 97), PackedInt32Array(76, 98, 77), PackedInt32Array(52, 77, 53), PackedInt32Array(96, 55, 54), PackedInt32Array(47, 97, 99), PackedInt32Array(47, 99, 48), PackedInt32Array(30, 51, 31), PackedInt32Array(81, 80, 84), PackedInt32Array(86, 91, 100), PackedInt32Array(86, 100, 85), PackedInt32Array(86, 64, 92), PackedInt32Array(43, 92, 44)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-187, -36, -163, -60, -142, -78, -141, -137, -115, -143, -117, -114, -110, -101, -103, -89, -98, -81, -68, -80, -60, -90, -47, -101, -45, -127, 4, -127, -14, -103, 2, -81, 12, -73, 26, -76, 33, -72, 35, -62, 48, -53, 68, -46, 95, -51, 131, -65, 146, -63, 170, -61, 193, -63, 207, -63, 221, -64, 230, -62, 267, -72, 269, -46, 253, -31, 268, -22, 276, -11, 263, 2, 272, 8, 266, 25, 254, 40, 247, 66, 216, 73, 194, 65, 171, 67, 172, 79, 209, 88, 210, 130, 248, 162, 191, 185, 148, 157, 147, 86, 120, 88, 118, 110, 83, 108, 79, 91, 60, 78, 28, 83, 13, 103, 39, 119, 34, 130, -1, 134, -10, 150, -49, 144, -68, 122, -42, 110, -24, 107, -18, 93, -43, 83, -61, 88, -86, 101, -115, 122, -158, 120, -160, 97, -221, 95, -221, 69, -264, 42, -308, 46, -323, -6, -292, -45, -249, -43, -214, -28), PackedVector2Array(-67, 51, -56, 17, -97, -8, -144, 11, -179, 44, -162, 65, -121, 60, -88, 73), PackedVector2Array(82, 64, 101, 61, 96, 47, 64, 25, 52, 34, 54, 46, 66, 60), PackedVector2Array(147, -4, 164, 6, 195, 0, 194, -13, 169, -18)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 agent_radius = 1.0
 
@@ -45,7 +49,7 @@ y_sort_enabled = true
 
 [node name="ground" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(18, -36)
+position = Vector2(10, -33)
 scale = Vector2(1000, 1000)
 texture = ExtResource("1_0flp6")
 
@@ -59,8 +63,11 @@ polygon = PackedVector2Array(-271, 83, -303, 35, -280, -115, -184, -221, 93, -22
 visible = false
 navigation_polygon = SubResource("NavigationPolygon_3hnsb")
 
-[node name="Shrine" parent="." instance=ExtResource("2_1onby")]
-position = Vector2(-23, -123)
+[node name="Shrine2" parent="." instance=ExtResource("2_e6y1j")]
+position = Vector2(-128, -132)
+
+[node name="Shrine3" parent="." instance=ExtResource("2_e6y1j")]
+position = Vector2(255, -60)
 
 [node name="ShrineOvergrown" parent="." instance=ExtResource("3_086x4")]
 position = Vector2(186, -62)
@@ -69,17 +76,61 @@ position = Vector2(186, -62)
 y_sort_enabled = true
 position = Vector2(-265, -42)
 
+[node name="ShrineOvergrown3" parent="." instance=ExtResource("3_086x4")]
+y_sort_enabled = true
+position = Vector2(-22, -126)
+
+[node name="TheHole" parent="." instance=ExtResource("32_134x3")]
+position = Vector2(-40, 79)
+
+[node name="SmallShrineOvergrown" parent="." instance=ExtResource("5_fujlx")]
+position = Vector2(-132, 65)
+scale = Vector2(1.01353, 1)
+
 [node name="SunClock" parent="." instance=ExtResource("9_wjoq0")]
 position = Vector2(85, 62)
 
 [node name="DonationBowl" parent="." instance=ExtResource("8_ra3s8")]
-position = Vector2(95, -20)
+position = Vector2(97, 67)
+
+[node name="DonationBowl2" parent="." instance=ExtResource("8_ra3s8")]
+position = Vector2(-168, 34)
+
+[node name="DriedPlants" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="DriedPlant1" parent="DriedPlants" instance=ExtResource("31_vmv7s")]
+position = Vector2(-25, -89)
+
+[node name="DriedPlant4" parent="DriedPlants" instance=ExtResource("31_vmv7s")]
+position = Vector2(-6, 34)
+
+[node name="DriedPlant5" parent="DriedPlants" instance=ExtResource("31_vmv7s")]
+position = Vector2(-227, -25)
+
+[node name="DriedPlant_2" parent="DriedPlants" instance=ExtResource("9_pd4p5")]
+position = Vector2(-25, -79)
+
+[node name="DriedPlant_3" parent="DriedPlants" instance=ExtResource("10_ddy11")]
+position = Vector2(-43, -81)
+
+[node name="DriedPlant_5" parent="DriedPlants" instance=ExtResource("10_ddy11")]
+position = Vector2(2, 43)
+
+[node name="DriedPlant_4" parent="DriedPlants" instance=ExtResource("11_v2cep")]
+position = Vector2(-12, -74)
+
+[node name="DriedPlant2" parent="DriedPlants" instance=ExtResource("31_vmv7s")]
+position = Vector2(1, -81)
+
+[node name="DriedPlant3" parent="DriedPlants" instance=ExtResource("31_vmv7s")]
+position = Vector2(-49, -90)
 
 [node name="Trees" type="Node2D" parent="."]
 y_sort_enabled = true
 
 [node name="Plant6" parent="Trees" instance=ExtResource("10_u0n0g")]
-position = Vector2(6, -89)
+position = Vector2(-59, -135)
 metadata/_edit_group_ = true
 
 [node name="Plant7" parent="Trees" instance=ExtResource("11_fmgla")]
@@ -1101,7 +1152,7 @@ scale = Vector2(1, -1)
 metadata/_edit_group_ = true
 
 [node name="Tree_17" parent="Trees" instance=ExtResource("10_u0n0g")]
-position = Vector2(-49, -98)
+position = Vector2(-65, -101)
 rotation = -3.14159
 scale = Vector2(1, -1)
 metadata/_edit_group_ = true
@@ -2289,7 +2340,7 @@ position = Vector2(23, -66)
 position = Vector2(-206, -29)
 
 [node name="Lamp4" parent="." instance=ExtResource("26_m0qi5")]
-position = Vector2(-131, 70)
+position = Vector2(-179, 50)
 
 [node name="Lamp5" parent="." instance=ExtResource("26_m0qi5")]
 position = Vector2(195, 103)
@@ -2302,9 +2353,3 @@ position = Vector2(130, 97)
 
 [node name="EntranceRock" parent="." instance=ExtResource("28_5apn8")]
 position = Vector2(183, 77)
-
-[node name="DriedPlant1" parent="." instance=ExtResource("31_vmv7s")]
-position = Vector2(-42, 31)
-
-[node name="TheHole" parent="." instance=ExtResource("32_134x3")]
-position = Vector2(-40, 79)

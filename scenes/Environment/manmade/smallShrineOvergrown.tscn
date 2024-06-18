@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://ppwjg0wwlnp2"]
+
+[ext_resource type="Script" path="res://scenes/environment/manmade/overgrownObject.gd" id="1_2clql"]
+[ext_resource type="PackedScene" uid="uid://chm1g3jhhgsqw" path="res://scenes/environment/manmade/smallShrine.tscn" id="2_ibr35"]
+[ext_resource type="Texture2D" uid="uid://451fs42rwgwi" path="res://assets/Sprites/Manmade/smallShrineOvergrown.png" id="2_vobhy"]
+[ext_resource type="PackedScene" uid="uid://bdjsd2ljlp6fh" path="res://scenes/InteractableZone.tscn" id="3_bxop0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gcy3o"]
+size = Vector2(23, 14)
+
+[node name="SmallShrineOvergrown" type="StaticBody2D"]
+texture_filter = 1
+position = Vector2(0, -1)
+script = ExtResource("1_2clql")
+normalObject = ExtResource("2_ibr35")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -7)
+shape = SubResource("RectangleShape2D_gcy3o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
+texture = ExtResource("2_vobhy")
+offset = Vector2(0, -14)
+
+[node name="interactableZone" parent="." instance=ExtResource("3_bxop0")]
+position = Vector2(0, -11)
+money_needed_for_interaction = 25
+
+[connection signal="on_interact" from="interactableZone" to="." method="_on_interactable_zone_on_interact"]

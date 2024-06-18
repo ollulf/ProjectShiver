@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1ukokw2wpy6h"]
+[gd_scene load_steps=6 format=3 uid="uid://d1ukokw2wpy6h"]
 
 [ext_resource type="Texture2D" uid="uid://d1oyknj54d33b" path="res://assets/Sprites/Manmade/donationBowl-empty.png" id="1_d5d4q"]
 [ext_resource type="Script" path="res://scripts/donation_bowl.gd" id="2_mer1o"]
 [ext_resource type="PackedScene" uid="uid://bdjsd2ljlp6fh" path="res://scenes/InteractableZone.tscn" id="4_n7rvs"]
+[ext_resource type="AudioStream" uid="uid://2sjgdxoe6q0a" path="res://assets/audio/sounds/coin.wav" id="4_yuhjb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wot8b"]
 size = Vector2(9, 5)
@@ -29,5 +30,9 @@ radius = 5.0
 
 [node name="navigation_target" type="Node2D" parent="."]
 position = Vector2(1, 6)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_yuhjb")
+bus = &"SFX"
 
 [connection signal="on_interact" from="interactableZone" to="." method="_on_interactable_zone_on_interact"]

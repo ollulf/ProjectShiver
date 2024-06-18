@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bd5mmtk1cakrk"]
+[gd_scene load_steps=3 format=3 uid="uid://brjpimkuew52i"]
 
 [ext_resource type="Script" path="res://scripts/InteractableOfferingSlot.gd" id="1_maix3"]
 [ext_resource type="PackedScene" uid="uid://bdjsd2ljlp6fh" path="res://scenes/InteractableZone.tscn" id="2_cu14x"]
@@ -8,7 +8,7 @@ position = Vector2(-35, 0)
 script = ExtResource("1_maix3")
 
 [node name="interactableZone" parent="." instance=ExtResource("2_cu14x")]
-position = Vector2(0, 7)
+position = Vector2(0, 9)
 
 [node name="item" type="Sprite2D" parent="."]
 

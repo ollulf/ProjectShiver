@@ -6,8 +6,8 @@ var xOrientation = 1;
 const SQUASH_STRENGTH = 0.05
 const IDLE_ANIMATION_SPEED = 3
 const IDLE_PEAK_SHARPNESS = 4
-const WALK_ANIMATION_SPEED = 20.0
-const WALK_ROTATION_STRENGTH = .3
+const WALK_ANIMATION_SPEED = 15.0
+const WALK_ROTATION_STRENGTH = .15
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -31,7 +31,7 @@ func walk_tween(timeInSeconds):
 	if (direction.x):
 		xOrientation = sign(direction.x)
 		
-	var dirToRotation = Vector2(1, direction.y * 0.5).angle() * xOrientation
+	var dirToRotation = Vector2(1, direction.y * 0.2).angle() * xOrientation
 	var rotationTarget = dirToRotation + raw * WALK_ROTATION_STRENGTH
 		
 	var rawS = pow(abs(sin(t)), .4) * sign(sin(t))
