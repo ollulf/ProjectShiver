@@ -4,8 +4,11 @@ extends StaticBody2D
 func _convertObject():
 	var instance = normalObject.instantiate()
 	add_sibling(instance)
+	instance.position = position
+	
 	instance = preload("res://scenes/effects/poofEffect.tscn").instantiate()
 	add_sibling(instance)
+	instance.position = position + Vector2(0,1)
 	queue_free()
 
 

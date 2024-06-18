@@ -45,3 +45,10 @@ func drop():
 	root.add_child(self)
 	global_position = p
 	$interactableZone.set_disabled(false)
+	
+func destroy():
+	if holder.has_method("change_pickup"):
+		holder.change_pickup(self,false)
+		picked_up = false
+	
+	queue_free()

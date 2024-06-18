@@ -10,6 +10,8 @@ var labelOriginPosition
 var tweenIn
 var tweenOut
 
+var is_being_destroyed = false
+
 var disabled := false
 
 signal on_interact
@@ -51,11 +53,18 @@ func _on_body_exited(body):
 		body.change_interactable(self, false)
 		isInteractable = 0
 
-		tweenOut = label.create_tween()
-		tweenOut.set_parallel()
-		tweenOut.tween_property(label, "modulate:a", 0, FADE_TIME)
-		tweenOut.tween_property(label, "position", Vector2(labelOriginPosition.x, labelOriginPosition.y), FADE_TIME)
-			
-		
+		if is_inside_tree() and not is_being_destroyed:
+			tweenOut = label.create_tween()
+			if tweenOut:
+				tweenOut.set_parallel()
+				tweenOut.tween_property(label, "modulate:a", 0, FADE_TIME)
+				tweenOut.tween_property(label, "position", Vector2(labelOriginPosition.x, labelOriginPosition.y), FADE_TIME)
+				
+func _exit_tree():
+	is_being_destroyed = true
+
+func _on_tree_exited():
+	is_being_destroyed = true
+
 func fireAction():
 	on_interact.emit()

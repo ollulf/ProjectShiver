@@ -21,3 +21,5 @@ texture = ExtResource("2_u2rsa")
 
 [node name="interactableZone" parent="." instance=ExtResource("3_m5ioh")]
 position = Vector2(-1, -5)
+
+[connection signal="on_interact" from="interactableZone" to="." method="_on_interactable_zone_on_interact"]
