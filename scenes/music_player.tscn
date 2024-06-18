@@ -1,10 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://dp2p6uawrb5in"]
+[gd_scene load_steps=6 format=3 uid="uid://dp2p6uawrb5in"]
 
 [ext_resource type="AudioStream" uid="uid://di53bvskdobic" path="res://assets/audio/music/Shrine Keeper - Daytime A.mp3" id="1_l1hq0"]
-[ext_resource type="AudioStream" uid="uid://bp3m23aoubgtp" path="res://assets/audio/music/night-placeholder.mp3" id="2_lhyxg"]
+[ext_resource type="Script" path="res://scenes/music_player.gd" id="1_v4x17"]
+[ext_resource type="AudioStream" uid="uid://dgsd8nksygkfw" path="res://assets/audio/music/Shrine Keeper - Nighttime A.mp3" id="3_r3jm6"]
+
+[sub_resource type="Curve" id="Curve_rope4"]
+_data = [Vector2(0.4, 1), 0.0, 2.08165e-12, 0, 0, Vector2(0.5, 2.08165e-12), 2.08165e-12, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_vy4me"]
+_data = [Vector2(0.5, 2.08165e-12), 0.0, 2.08165e-12, 0, 0, Vector2(0.6, 1), 2.08165e-12, 0.0, 0, 0]
+point_count = 2
 
 [node name="Node" type="Node"]
 process_mode = 3
+script = ExtResource("1_v4x17")
+day_curve = SubResource("Curve_rope4")
+night_curve = SubResource("Curve_vy4me")
 
 [node name="DayMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_l1hq0")
@@ -12,5 +24,6 @@ autoplay = true
 bus = &"Music"
 
 [node name="NightMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_lhyxg")
+stream = ExtResource("3_r3jm6")
+autoplay = true
 bus = &"Music"
