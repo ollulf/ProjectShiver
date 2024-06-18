@@ -14,6 +14,9 @@ func onInteract():
 
 func set_tex(val):
 	$Sprite2D.texture = val	
+	
+func get_tex():
+	return $Sprite2D.texture
 
 func pick_up(target:Node2D):
 	if picked_up:
