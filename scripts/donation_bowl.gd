@@ -32,8 +32,9 @@ func add_money(amount):
 		texture = bowl_full_3
 		
 func _on_interactable_zone_on_interact():
-
+	print("Fired interaction bowl signal")
 	if currentMoney > 0:
+		print("Updated Money")
 		MoneyHandler.UpdateMoney(MoneyHandler.currentPlayerMoney + currentMoney)
 		add_money(-currentMoney)
 

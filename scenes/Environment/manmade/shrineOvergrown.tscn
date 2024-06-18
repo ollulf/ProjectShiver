@@ -22,6 +22,7 @@ texture = ExtResource("2_hwmdd")
 offset = Vector2(0, -14)
 
 [node name="interactableZone" parent="." instance=ExtResource("3_a2h6m")]
-position = Vector2(0, -12)
+position = Vector2(0, -7)
+money_needed_for_interaction = 30
 
 [connection signal="on_interact" from="interactableZone" to="." method="_on_interactable_zone_on_interact"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d1oyknj54d33b" path="res://assets/Sprites/Manmade/donationBowl-empty.png" id="1_d5d4q"]
 [ext_resource type="Script" path="res://scripts/donation_bowl.gd" id="2_mer1o"]
-[ext_resource type="PackedScene" uid="uid://3ckopbhej41u" path="res://scenes/InteractableZone.tscn" id="4_n7rvs"]
+[ext_resource type="PackedScene" uid="uid://bdjsd2ljlp6fh" path="res://scenes/InteractableZone.tscn" id="4_n7rvs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wot8b"]
 size = Vector2(9, 5)

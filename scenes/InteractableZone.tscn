@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdjsd2ljlp6fh"]
+[gd_scene load_steps=4 format=3 uid="uid://bdjsd2ljlp6fh"]
 
 [ext_resource type="Script" path="res://scripts/interactabletrigger.gd" id="1_3bepu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oo07x"]
 size = Vector2(16, 24)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ckcpp"]
+font_size = 10
+font_color = Color(1, 1, 0.776471, 1)
 
 [node name="interactableZone" type="Area2D"]
 collision_mask = 2
@@ -23,6 +27,16 @@ theme_override_font_sizes/font_size = 9
 text = "E"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 17.0
+offset_right = 68.0
+offset_bottom = 38.0
+text = "99 Gold"
+label_settings = SubResource("LabelSettings_ckcpp")
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

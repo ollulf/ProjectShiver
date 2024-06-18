@@ -5,3 +5,4 @@ func _on_interactable_zone_on_interact():
 	
 	if temp:
 		temp.destroy()
+		

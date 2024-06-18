@@ -16,11 +16,21 @@ var disabled := false
 
 signal on_interact
 
+#this is for money or faith checks
+@export var money_needed_for_interaction = 0
+
 @onready var label = $Label
 
 func _ready():
 	labelOriginPosition = label.position
 	label.modulate.a = 0
+	
+	if money_needed_for_interaction != 0:
+		$Label/Label2.text = "Gold" + str(money_needed_for_interaction)
+		
+	else: 
+		$Label/Label2.text = ""
+	
 
 func set_disabled(value):
 	disabled = value
@@ -67,4 +77,6 @@ func _on_tree_exited():
 	is_being_destroyed = true
 
 func fireAction():
-	on_interact.emit()
+	if MoneyHandler.currentPlayerMoney >= money_needed_for_interaction:
+		MoneyHandler.UpdateMoney(MoneyHandler.currentPlayerMoney - money_needed_for_interaction)
+		on_interact.emit()
