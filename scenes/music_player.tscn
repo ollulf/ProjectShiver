@@ -5,11 +5,11 @@
 [ext_resource type="AudioStream" uid="uid://dgsd8nksygkfw" path="res://assets/audio/music/Shrine Keeper - Nighttime A.mp3" id="3_r3jm6"]
 
 [sub_resource type="Curve" id="Curve_rope4"]
-_data = [Vector2(0.4, 1), 0.0, 2.08165e-12, 0, 0, Vector2(0.5, 2.08165e-12), 2.08165e-12, 0.0, 0, 0]
+_data = [Vector2(0.3, 1), 0.0, 2.08165e-12, 0, 0, Vector2(0.7, 0), 2.08165e-12, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="Curve" id="Curve_vy4me"]
-_data = [Vector2(0.5, 2.08165e-12), 0.0, 2.08165e-12, 0, 0, Vector2(0.6, 1), 2.08165e-12, 0.0, 0, 0]
+_data = [Vector2(0.3, 0), 0.0, 2.08165e-12, 0, 0, Vector2(0.7, 1), 2.08165e-12, 0.0, 0, 0]
 point_count = 2
 
 [node name="Node" type="Node"]
