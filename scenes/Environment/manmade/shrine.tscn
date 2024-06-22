@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/misc/Shrine.gd" id="1_brlrd"]
 [ext_resource type="Texture2D" uid="uid://bh65denxum1bq" path="res://assets/Sprites/Manmade/shrine.png" id="2_fqf4h"]
-[ext_resource type="PackedScene" path="res://scenes/interactable_offering_slot.tscn" id="3_u76y4"]
+[ext_resource type="PackedScene" uid="uid://brjpimkuew52i" path="res://scenes/interactable_offering_slot.tscn" id="3_u76y4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gcy3o"]
 size = Vector2(62, 21)

@@ -78,6 +78,7 @@ sprite_frames = SubResource("SpriteFrames_yw5ht")
 frame = 7
 frame_progress = 1.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_hvwid")
-bus = &"SFX"
+pitch_scale = 1.2
+max_distance = 156.0

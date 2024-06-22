@@ -11,6 +11,9 @@ var currentMoney = 0
 static var Bowls = []
 
 @onready var navigation_target = $navigation_target
+@onready var coin_audio = $coinInAudio
+@onready var bowl_full_audio = $bowlFullAudio
+@onready var bowl_empty_audio = $bowlEmptyAudio
 
 func _ready():
 	#add_money(0)
@@ -19,7 +22,7 @@ func _ready():
 func add_money(amount):
 	currentMoney += amount
 	
-	$AudioStreamPlayer.play()
+	coin_audio.play()
 	
 	if currentMoney > donationLimit:
 		currentMoney = donationLimit
@@ -35,7 +38,9 @@ func add_money(amount):
 		
 func _on_interactable_zone_on_interact():
 	if currentMoney > 0:
-		$AudioStreamPlayer.play()
+		bowl_full_audio.play()
 		MoneyHandler.UpdateMoney(MoneyHandler.currentPlayerMoney + currentMoney)
 		add_money(-currentMoney)
+	else:
+		bowl_empty_audio.play()
 
