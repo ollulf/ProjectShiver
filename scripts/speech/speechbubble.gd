@@ -14,5 +14,5 @@ func _ready():
 	t.tween_callback(queue_free)
 
 func _process(delta):
-	if node:
-		position = node.get_global_transform_with_canvas().origin + offset
+	if node and weakref(node).get_ref():
+			position = node.get_global_transform_with_canvas().origin + offset

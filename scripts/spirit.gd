@@ -41,8 +41,8 @@ func _on_info_trigger_body_entered(body):
 		return
 		
 	if (slot.currentPickup != null and slot.currentPickup.get_name() == desiredPickup):		
-		SpeechbubbleManger.say(self, "thank you")
+		SpeechbubbleManger.say(slot, "thank you")
 		slot.currentPickup.pick_up(self)
-		queue_free()
+		call_deferred("free")
 	else:
 		SpeechbubbleManger.say(self, "I want " + desiredPickup)
