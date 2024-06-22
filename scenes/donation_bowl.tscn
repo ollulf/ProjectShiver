@@ -43,4 +43,7 @@ stream = ExtResource("5_xiyhv")
 [node name="bowlEmptyAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_256t7")
 
+[node name="coinEffectRoot" type="Node2D" parent="."]
+position = Vector2(0, -19)
+
 [connection signal="on_interact" from="interactableZone" to="." method="_on_interactable_zone_on_interact"]
