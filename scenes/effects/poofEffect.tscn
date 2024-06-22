@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dahgcib1djtmb"]
+[gd_scene load_steps=9 format=3 uid="uid://bfllta5pggcha"]
 
 [ext_resource type="Script" path="res://scripts/vfx/timer.gd" id="1_oiafu"]
 [ext_resource type="Texture2D" uid="uid://dpvxmt1heucaj" path="res://assets/Sprites/effects/poof.png" id="2_fh1go"]

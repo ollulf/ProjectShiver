@@ -1,8 +1,59 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnif1npq2u1dh"]
+[gd_scene load_steps=12 format=3 uid="uid://bnif1npq2u1dh"]
 
 [ext_resource type="FontFile" uid="uid://cpetscin3nqpy" path="res://assets/Sprites/UI/EXEPixelPerfect.ttf" id="1_l8vu6"]
 [ext_resource type="Script" path="res://scripts/time_displayer.gd" id="1_ttfws"]
 [ext_resource type="Script" path="res://scripts/money-displayer.gd" id="2_ak3hu"]
+[ext_resource type="Texture2D" uid="uid://c3s1fqcvqeb5d" path="res://assets/Sprites/coin_spritesheet.png" id="4_3bpjb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lp4r"]
+atlas = ExtResource("4_3bpjb")
+region = Rect2(0, 0, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a437l"]
+atlas = ExtResource("4_3bpjb")
+region = Rect2(13, 0, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qk4tk"]
+atlas = ExtResource("4_3bpjb")
+region = Rect2(26, 0, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hm6s"]
+atlas = ExtResource("4_3bpjb")
+region = Rect2(39, 0, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgcoc"]
+atlas = ExtResource("4_3bpjb")
+region = Rect2(52, 0, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwdov"]
+atlas = ExtResource("4_3bpjb")
+region = Rect2(65, 0, 13, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xddn8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5lp4r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a437l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qk4tk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hm6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgcoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwdov")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="UI" type="CanvasLayer"]
 
@@ -13,10 +64,17 @@ theme_override_fonts/font = ExtResource("1_l8vu6")
 script = ExtResource("1_ttfws")
 
 [node name="money-displayer" type="Label" parent="."]
-offset_left = 233.0
-offset_right = 273.0
+offset_left = 232.0
+offset_right = 272.0
 offset_bottom = 23.0
+theme_override_colors/font_color = Color(1, 0.811765, 0, 1)
 theme_override_fonts/font = ExtResource("1_l8vu6")
-text = "MONI"
+text = "123"
 horizontal_alignment = 2
 script = ExtResource("2_ak3hu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="money-displayer"]
+position = Vector2(48, 8)
+sprite_frames = SubResource("SpriteFrames_xddn8")
+autoplay = "default"
+frame_progress = 0.747995
