@@ -27,7 +27,7 @@ position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_8lxmi")
 
 [node name="shadow" type="Sprite2D" parent="."]
-position = Vector2(0, -2)
+position = Vector2(0, 4)
 texture = ExtResource("2_usw1x")
 
 [node name="sprite" type="Sprite2D" parent="."]
