@@ -13,9 +13,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var curveResult = npcTargetCountOverTimeOfDay.sample_baked(DayNightHandler.timeOfDayInWorldHours / 24.0)
-	var multiplier = .25;
-	multiplier += Shrine.Shrines.size() * .3
-	multiplier += DonationBowl.Bowls.size() * .1
+	var multiplier = .2;
+	multiplier += Shrine.Shrines.size() * .5
 	var npcTargetCount = round(curveResult * multiplier)
 	var npcCurrentCount = npcs.size()
 	
