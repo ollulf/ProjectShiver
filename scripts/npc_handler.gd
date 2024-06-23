@@ -12,8 +12,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var npcTargetCount = round(npcTargetCountOverTimeOfDay.sample_baked(DayNightHandler.timeOfDayInWorldHours / 24.0))
+	var curveResult = npcTargetCountOverTimeOfDay.sample_baked(DayNightHandler.timeOfDayInWorldHours / 24.0)
+	var multiplier = .25;
+	multiplier += Shrine.Shrines.size() * .3
+	multiplier += DonationBowl.Bowls.size() * .1
+	var npcTargetCount = round(curveResult * multiplier)
 	var npcCurrentCount = npcs.size()
+	
+	print(npcTargetCount)
 	
 	if (npcCurrentCount < npcTargetCount):
 		var newNPC = BASE_NPC.instantiate()
