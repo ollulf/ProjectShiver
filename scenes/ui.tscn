@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://bnif1npq2u1dh"]
+[gd_scene load_steps=13 format=3 uid="uid://bnif1npq2u1dh"]
 
 [ext_resource type="FontFile" uid="uid://cpetscin3nqpy" path="res://assets/Sprites/UI/EXEPixelPerfect.ttf" id="1_l8vu6"]
 [ext_resource type="Script" path="res://scripts/time_displayer.gd" id="1_ttfws"]
 [ext_resource type="Script" path="res://scripts/money-displayer.gd" id="2_ak3hu"]
 [ext_resource type="Texture2D" uid="uid://c3s1fqcvqeb5d" path="res://assets/Sprites/coin_spritesheet.png" id="4_3bpjb"]
+[ext_resource type="PackedScene" uid="uid://bnstbl3xm7bj1" path="res://scenes/start_up_popup.tscn" id="5_612xc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5lp4r"]
 atlas = ExtResource("4_3bpjb")
@@ -78,3 +79,5 @@ position = Vector2(48, 8)
 sprite_frames = SubResource("SpriteFrames_xddn8")
 autoplay = "default"
 frame_progress = 0.747995
+
+[node name="StartUp_Popup" parent="." instance=ExtResource("5_612xc")]

@@ -30,7 +30,8 @@ func switch_item_with(target):
 	if drop:
 		drop.pick_up(target)
 	
-	play_effect()
+	if currentPickup:
+		play_effect()
 	
 func play_effect():
 	var instance = preload("res://scenes/effects/offerEffect.tscn").instantiate()

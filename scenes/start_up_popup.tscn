@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnstbl3xm7bj1"]
+
+[ext_resource type="Script" path="res://scripts/start_up_popup.gd" id="1_0adjn"]
+[ext_resource type="FontFile" uid="uid://cpetscin3nqpy" path="res://assets/Sprites/UI/EXEPixelPerfect.ttf" id="1_0pbpi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_evl75"]
+font = ExtResource("1_0pbpi")
+
+[node name="StartUp_Popup" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0adjn")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.6
+offset_top = -58.1
+offset_right = 246.4
+offset_bottom = 163.9
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = -38.0
+offset_right = -9.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "PLAY"
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 324.0
+offset_bottom = 171.0
+text = "Welcome to your shrine, nestled in a mystical realm where tradition meets the supernatural. During the day, villagers come to pray and make offerings. As night falls, spirits emerge, seeking these offerings.
+
+Your role is to maintain the shrine, ensure the spirits receive their offerings, and expand the shrine to attract more visitors.
+
+Move with WASD or Arrow Keys, and press E to interact."
+label_settings = SubResource("LabelSettings_evl75")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[connection signal="button_up" from="Panel/Button" to="." method="_on_button_button_up"]
