@@ -1,13 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://civesr6iscj7c"]
+[gd_scene load_steps=6 format=3 uid="uid://civesr6iscj7c"]
 
 [ext_resource type="Script" path="res://scripts/base_npc.gd" id="1_4wd5l"]
 [ext_resource type="Texture2D" uid="uid://dhrnaprg44huh" path="res://assets/Sprites/Characters/Frog2_Body.png" id="2_ekedt"]
+[ext_resource type="Texture2D" uid="uid://bdfnnjrj0sp0h" path="res://assets/shadow.png" id="2_u1wqb"]
 [ext_resource type="Script" path="res://scripts/character_tween_animator.gd" id="3_jvs2y"]
 [ext_resource type="Texture2D" uid="uid://btmw2ofwdrl75" path="res://assets/Sprites/Characters/Frog2_Arms.png" id="6_5bcof"]
 
 [node name="Base_NPC" type="CharacterBody2D"]
 y_sort_enabled = true
 script = ExtResource("1_4wd5l")
+
+[node name="shadow" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, 1)
+texture = ExtResource("2_u1wqb")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
